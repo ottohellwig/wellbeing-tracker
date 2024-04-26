@@ -14,5 +14,5 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
     <fx:include source="navigationBar-view.fxml"/>
-    <Label text="Resources Page" />
+    <Label text="Wellbeing Resources" />
 </VBox>

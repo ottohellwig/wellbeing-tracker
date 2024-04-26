@@ -14,5 +14,6 @@
         <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
     </padding>
     <fx:include source="navigationBar-view.fxml"/>
-    <Label text="Logout Page" />
+    <Label text="Wellbeing Tracker" />
+    <Label text="You have been successfully logged out." />
 </VBox>
