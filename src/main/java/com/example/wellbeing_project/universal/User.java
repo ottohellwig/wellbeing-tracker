@@ -1,4 +1,4 @@
-package com.example.signup01;
+package com.example.wellbeing_project.universal;
 
 public class User {
     private String name;
