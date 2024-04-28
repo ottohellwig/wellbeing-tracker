@@ -1,4 +1,4 @@
-package com.example.signup01;
+package com.example.wellbeing_project.signup;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
