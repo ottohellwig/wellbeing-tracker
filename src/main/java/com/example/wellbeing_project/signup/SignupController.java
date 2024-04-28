@@ -5,6 +5,7 @@ import javafx.scene.control.*;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+import com.example.wellbeing_project.universal.*;
 
 // Constructor method
 public class SignupController {
