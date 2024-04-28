@@ -1,4 +1,4 @@
-package com.example.signup01;
+package com.example.wellbeing_project.universal;
 
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
