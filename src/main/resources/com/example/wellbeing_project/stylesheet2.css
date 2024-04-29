@@ -1,0 +1,52 @@
+/* Set general button settings */
+.button {
+    -fx-background-color: BlueViolet;
+    -fx-text-fill: white;
+    -fx-border-color: white;
+    -fx-border-radius: 5;
+}
+
+/* Set color of button when mouse hovers over it */
+.button:hover {
+    -fx-background-color: #2e2e2e;
+}
+
+/* Set color of button with fx:id="signinBtn" */
+#signinBtn {
+    -fx-background-color: #E22BDE;
+    -fx-font-weight: bold;
+}
+
+#title {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+#subtitle {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+#subtitle2 {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-text-fill: black;
+    -fx-border-color: black;
+    -fx-border-radius: 2;
+}
+
+.label {
+    -fx-text-fill: white;
+}
+
+.check-box {
+    -fx-text-fill: white;
+}
+
+/* Set the root color to Indigo */
+.root {
+    -fx-background-color: Indigo;
+}
