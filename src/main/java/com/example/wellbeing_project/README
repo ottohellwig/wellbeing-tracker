@@ -1,0 +1,1 @@
+*/ To allow the daabase to funciton, the external libraries in the lib folder must be added to the project by opening module settings of the project and adding the libraries as java files
