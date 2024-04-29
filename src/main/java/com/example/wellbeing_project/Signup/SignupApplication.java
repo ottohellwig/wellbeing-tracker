@@ -8,6 +8,10 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+// Variables to easily change height and width of application
+// int height = 500
+// int width = 400
+
 // Create
 public class SignupApplication extends Application {
     @Override
