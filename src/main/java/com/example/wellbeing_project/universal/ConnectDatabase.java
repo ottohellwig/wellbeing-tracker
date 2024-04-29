@@ -6,6 +6,7 @@ import java.sql.SQLException;
 
 public class ConnectDatabase {
     // Create variable that holds URL to SQLite database
+    // Edit "../Wellness_Tracker.db/" to be the file path to your local saved database
     private static final String URL = "jdbc:sqlite:../Wellness_Tracker.db/";
 
     // Create method to connect application to database
