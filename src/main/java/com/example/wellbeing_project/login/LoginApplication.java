@@ -1,6 +1,7 @@
 package com.example.wellbeing_project.login;
 
 import com.example.wellbeing_project.signup.SignupApplication;
+import com.example.wellbeing_project.HomeApplication;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -8,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.time.format.TextStyle;
 
 // Constructor method
 public class LoginApplication extends Application {
@@ -34,6 +36,17 @@ public class LoginApplication extends Application {
     // Method to close stage and open signup stage
     public void openSignup(Stage stage) {
         SignupApplication signup = new SignupApplication();
+        try {
+            signup.start(new Stage());
+            stage.close();
+        } catch (Exception e) {
+            e.printStackTrace(); // See errors
+        }
+    }
+
+    // Method to close stage and open signup stage
+    public void openHomeApplication(Stage stage) {
+        HomeApplication signup = new HomeApplication();
         try {
             signup.start(new Stage());
             stage.close();
