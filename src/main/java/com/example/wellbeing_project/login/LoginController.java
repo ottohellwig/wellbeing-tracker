@@ -26,6 +26,12 @@ public class LoginController {
 
         if (login(email, password)) {
             System.out.println("Login successful!");
+            // Get stage
+            Stage stage = (Stage) emailField.getScene().getWindow();
+
+            // Call openHomeApplication method from LoginApplication class
+            LoginApplication loginApp = new LoginApplication();
+            loginApp.openHomeApplication(stage);
         } else {
             System.out.println("Login failed!");
             // Show error message
