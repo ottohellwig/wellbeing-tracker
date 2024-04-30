@@ -8,7 +8,6 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HomeApplication extends Application {
-
     public static final String TITLE = "Wellbeing Tracker";
     public static final int WIDTH = 640;
     public static final int HEIGHT = 360;
