@@ -6,7 +6,7 @@ import java.sql.SQLException;
 
 public class ConnectDatabase {
     // Create variable that holds URL to SQLite database
-    private static final String URL = "jdbc:sqlite:/C:/Users/USER/IdeaProjects/cab302-wellbeing-project2/Wellness_Tracker.db/";
+    private static final String URL = "jdbc:sqlite:/C:/Users/n11081708/IdeaProjects/cab302-wellbeing-project-v1/Wellness_Tracker.db/";
 
     // Create method to connect application to database
     public static Connection connect() {
