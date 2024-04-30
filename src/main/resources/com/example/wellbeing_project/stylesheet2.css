@@ -1,4 +1,7 @@
+
 /* Set general button settings */
+/* Select all buttons and set the background color to red
+and the text color to white */
 .button {
     -fx-background-color: BlueViolet;
     -fx-text-fill: white;
@@ -11,7 +14,10 @@
     -fx-background-color: #2e2e2e;
 }
 
+
 /* Set color of button with fx:id="signinBtn" */
+
+/* Set color of node with fx:id="confirmBtn" */
 #signinBtn {
     -fx-background-color: #E22BDE;
     -fx-font-weight: bold;
@@ -26,10 +32,12 @@
     -fx-font-size: 16px;
     -fx-font-weight: bold;
 }
+
 #subtitle2 {
     -fx-font-size: 16px;
     -fx-font-weight: bold;
 }
+
 
 .text-field {
     -fx-background-color: white;
