@@ -1,0 +1,384 @@
+commit 8ad2ca156e272afe18960e8f3f50ce21718ccd13
+Merge: cf2a878 5f1cc8a
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 13:19:08 2024 +1000
+
+    Merge pull request #14 from ottohellwig/kodeejane-patch-1
+    
+    User Test Files -
+
+commit cf2a87881695a69d3e7972b1f65daa333becbda6
+Merge: be96f7a a9b8ccf
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 13:18:52 2024 +1000
+
+    Merge pull request #12 from ottohellwig/Trent057-main-patch-5
+    
+    Create logoutREADME - resolved styling conflicts
+
+commit a9b8ccf4caf1b648c8a2e934863dd190ddbba003
+Merge: 73da8fa be96f7a
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 13:18:25 2024 +1000
+
+    Merge branch 'main' into Trent057-main-patch-5
+
+commit be96f7ab0bb67edb37c4c163785170d3d3d13000
+Merge: 44964cf 08635f1
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 13:14:32 2024 +1000
+
+    Merge pull request #10 from ottohellwig/Trent057-patch-2
+    
+    Create Module-infoCOPY
+
+commit 44964cfc671b4d0a48108d2757c01b2b3955040b
+Merge: 954779e 2c39ae9
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 13:14:16 2024 +1000
+
+    Merge pull request #9 from ottohellwig/Trent057-main-patch-3
+    
+    Add files via upload
+
+commit 5f1cc8ace57c60dfa4e452a2433c69bf50109eef
+Author: kodeejane <153156407+kodeejane@users.noreply.github.com>
+Date:   Tue Apr 30 13:12:21 2024 +1000
+
+    User Test Files
+
+commit 73da8faf6949caf6fdda113671626bdbc83e9f56
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:23:49 2024 +1000
+
+    Add files via upload
+
+commit 21f6cd37cd84cd1cb5659294fd249b995a29484d
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:21:51 2024 +1000
+
+    Add files via upload
+
+commit fb112a0a60512e4b77d440c15df3add3c6e0f9ac
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:21:01 2024 +1000
+
+    Add files via upload
+
+commit 08f35308bb9fa831ee4dfeb41a64a303799de7c8
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:20:33 2024 +1000
+
+    Add files via upload
+
+commit 9820451166d07339585db25e17175a338548de3f
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:20:05 2024 +1000
+
+    Add files via upload
+
+commit 839a763689e381d6f26c5c890bcced03c7b12567
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:19:08 2024 +1000
+
+    Add files via upload
+
+commit 807927908587a993b9840de096297b0b4e2df3b3
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:14:14 2024 +1000
+
+    Create resources.README
+
+commit 07381027bb80ba1ef7f60b70d2fe78f5481c109f
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:12:06 2024 +1000
+
+    Create universal.README
+
+commit 2f32a4febf1c162e32ecf837872bffb6aa50d206
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:11:36 2024 +1000
+
+    Create signup.README
+
+commit 3475793cd4d65edc7a56a44670183d8299ab6768
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:11:04 2024 +1000
+
+    Create module-info.COPY
+
+commit 6522dbeb84958f777f7babc6729078314ebf8703
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:10:00 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/universal directory
+
+commit 4539e8e3f0c211d2ec92aa71c2af054b159212cf
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:09:35 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/signup directory
+
+commit 34c234f0f3394c983e6f42e315ea4a692fd21a26
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:09:18 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/Signup directory
+
+commit 7bfb86b6cb715cb3e2eec9c60a25e6d245ff15f8
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 03:08:06 2024 +1000
+
+    Create logoutREADME
+
+commit 08635f104f3e6f439291cb656fbc87b6533b9ff0
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Mon Apr 29 19:07:24 2024 +1000
+
+    Create Module-infoCOPY
+
+commit 2c39ae99dd80171a5c60fba87ce47ee5e8cf8dc5
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Mon Apr 29 18:54:32 2024 +1000
+
+    Add files via upload
+
+commit 954779ee22bd4b99e3a982a07ecfff8f370012ba
+Merge: d9413f5 ddb70da
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Mon Apr 29 13:45:52 2024 +1000
+
+    Merge pull request #8 from ottohellwig/database
+    
+    Database
+
+commit d9413f5f45ec7dbdf1a2fcfc3b5c2acc142beb39
+Merge: 521de4a 1abc157
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Mon Apr 29 13:45:40 2024 +1000
+
+    Merge pull request #7 from ottohellwig/UI-base
+    
+    UI base
+
+commit 521de4a7cdee716be5ff4f67951867fd01ff767a
+Merge: daa1700 d7178a7
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Mon Apr 29 13:43:46 2024 +1000
+
+    Merge pull request #5 from ottohellwig/Shem-Package
+    
+    Creating Packages
+
+commit ddb70da2faaeab194d9377ab2500310e4c7e10db
+Merge: 0ead537 e9a8af0
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Mon Apr 29 13:43:37 2024 +1000
+
+    Merge pull request #4 from ottohellwig/Trent057-database-patch01
+    
+    Add files via upload
+
+commit 1abc157c2ba904d34df51dab8740c78d42e6446a
+Merge: aa408c0 9c9bc81
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Mon Apr 29 13:43:14 2024 +1000
+
+    Merge pull request #3 from ottohellwig/Trent057-UI-base-patch01
+    
+    Create Signup folder in for UI-Base branch
+
+commit d7178a79675991a91215c1202b545af29016d9a0
+Author: slcd14 <shemlee0614@gmail.com>
+Date:   Sun Apr 28 21:10:29 2024 +1000
+
+    testing git commit
+
+commit e9a8af0c3b28a07261d6e8959af0519a71b01294
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 21:05:12 2024 +1000
+
+    Add files via upload
+
+commit e43dca3f1f2a48696b7d2ffad7f25c7796430760
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:30:32 2024 +1000
+
+    Update SignupController.java
+
+commit 6da3b06b4f04addbb498ec4b4c7115ca4a46cfe9
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:30:14 2024 +1000
+
+    Update SignupApplication.java
+
+commit 643ebdf9fcec43f50f6f48207de0f2c895552ec2
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:29:25 2024 +1000
+
+    Update User.java
+
+commit 700e622b9dc07b41d01c7576ecf57a74c49f8358
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:29:15 2024 +1000
+
+    Update ErrorAlert.java
+
+commit 3a4595c572b91afc7774e6b3f87063c5db85d487
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:28:59 2024 +1000
+
+    Update ConnectDatabase.java
+
+commit 3fcb02f8225d5193e0103882503e89b5c7e8f5e2
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:27:32 2024 +1000
+
+    Add files via upload
+
+commit 328b0f6458a83bdfe485891fcb4fe8ae805217f8
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:27:01 2024 +1000
+
+    Update SignupController.java
+
+commit 8bdf30b0a34b0e9236b89aef407b414f1f3abc5a
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:26:37 2024 +1000
+
+    Update SignupApplication.java
+
+commit be9a985d2d356158151943421fff1866a8d67891
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:24:45 2024 +1000
+
+    Add files via upload
+
+commit f432167fb5c1fe1d1b4d3532e497ba34ef5232e6
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:24:22 2024 +1000
+
+    Create universal.README
+
+commit 757176a74d9d604f765b958b70107613d020958d
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:17:17 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/signup/com/example/signup01 directory
+
+commit f98c826bcbe7db0a20a7f5479aebd5364edf8608
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:12:59 2024 +1000
+
+    Add files via upload
+
+commit 0ead537893e24c2297153b1a67c6c35b1a2b9ddd
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:10:35 2024 +1000
+
+    Add files via upload
+
+commit 073be3061afaa2f86fc7b3782667119f81ee0bfe
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:09:46 2024 +1000
+
+    Create lib.README
+
+commit 71c84782a132997329989eeb83e79bc36dd59880
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 20:06:52 2024 +1000
+
+    Create signup.README
+
+commit 9c9bc81eacfcf990c6db26a0957035074a46b968
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 19:41:25 2024 +1000
+
+    Create Signup.README
+
+commit b7244c6b850ee23a14a04e3c381832a9abdc334a
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 19:40:52 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/signup/SignupApplication.java
+
+commit 6f1d5da6cd04bac1c677aeee1bf9d23d121ba9ec
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 19:39:59 2024 +1000
+
+    Create SignupApplication.java
+
+commit d54551960e8974e857c6639eb0c7e90e1d6245ba
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 19:38:48 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/Signup
+
+commit 2f281f3bacf97cbc607fe0991a96697765143a1d
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Sun Apr 28 19:36:28 2024 +1000
+
+    Create Signup
+
+commit daa17003333e407375a8cbce3bb8931c41c4d7ff
+Merge: 633bebf ad91a89
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Sun Apr 28 13:04:32 2024 +1000
+
+    Merge pull request #2 from ottohellwig/Trent057-patch-1
+    
+    Create login folder
+
+commit aa408c0c673d36e41040b6828cd2365c509a4c8e
+Author: angerpac <anger.pac@connect.qut.edu.au>
+Date:   Fri Apr 26 11:50:21 2024 +1000
+
+    added content to pages
+
+commit ad91a89805b5e6fe1a30505d2fd8144f2f42388c
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Thu Apr 25 21:54:32 2024 +1000
+
+    Create login folder
+
+commit d2fbb9829a89656d5390b08412db89d800e61808
+Author: kodeejane <153156407+kodeejane@users.noreply.github.com>
+Date:   Thu Apr 25 16:02:28 2024 +1000
+
+    Add SQLite Database
+
+commit 414c22339e4dc24bfdfa5c7f90be655f27b79b22
+Author: angerpac <anger.pac@connect.qut.edu.au>
+Date:   Wed Apr 24 08:51:55 2024 +1000
+
+    added main pages and nav bar
+
+commit 633bebfa6a020d38ad99927e971261c972c5b81a
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 16 22:33:45 2024 +1000
+
+    Update README.md
+
+commit 72b8091409c742dc5ded2e806b7e53864c04e946
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Sun Mar 24 18:32:12 2024 +1000
+
+    Add git log
+
+commit 0a9ce185a9e72771c28d12ed078064f010027e39
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Sun Mar 24 18:30:36 2024 +1000
+
+    Init skeleton
+
+commit 09f1cee295a0c5995776d5afa0447d8787db2cc8
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Mar 12 15:20:55 2024 +1000
+
+    Update README.md
+
+commit 405bfec214a374e7160d8c189269715fdc46e161
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Mar 12 13:39:35 2024 +1000
+
+    Initial commit
