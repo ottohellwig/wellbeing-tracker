@@ -51,8 +51,7 @@
             </padding>
             <Label text="Already have an account?"/>
             <Region HBox.hgrow="ALWAYS"/>
-            <Button fx:id="loginButton" onAction="#startLogin" text="Sign in"/>
-            <Label text="Sign In"/>
+            <Button fx:id="loginButton" onAction="#startLogin" text="Sign in"/>            
         </HBox>
 
     </VBox>
