@@ -13,7 +13,7 @@ public class ErrorAlert {
         // Set the title of the alert
         alert.setTitle(errorTitle);
 
-        // Set the content text (the message)
+        // Set the message
         alert.setContentText(message);
 
         // Show the alert

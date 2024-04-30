@@ -1,4 +1,4 @@
-package com.example.wellbeing_project.signup;
+package com.example.wellbeing_project.logout;
 
 import com.example.wellbeing_project.login.LoginApplication;
 import javafx.application.Application;
@@ -9,29 +9,28 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
-// Constructor method
-public class SignupApplication extends Application {
+public class LogoutApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        // Retrieve fxml document
-        Parent root = FXMLLoader.load(getClass().getResource("/signup-view.fxml"));
+        // Retrieve fmxl document
+        Parent root = FXMLLoader.load(getClass().getResource("/logout-view.fxml"));
         stage.setTitle("Wellbeing Tracker");
 
-        // Create scene
-        Scene scene = new Scene(root, 400, 500);
+        // Create a scene and set the root
+        Scene scene = new Scene(root, 400, 300);
 
-        // CSS stylesheet
-        String stylesheet = SignupApplication.class.getResource("/stylesheet2.css").toExternalForm();
+        // Load CSS stylesheet
+        String stylesheet = LogoutApplication.class.getResource("/stylesheet2.css").toExternalForm();
 
-        // Apply CSS Stylesheet
+        // Apply stylesheet to scene
         scene.getStylesheets().add(stylesheet);
 
-        // Set scene to the stage
+        // Set scene to stage
         stage.setScene(scene);
         stage.show();
     }
 
-    // Method to open login page
+    // Method that closes current stage and opens the login stage
     public void openLogin(Stage stage) {
         LoginApplication login = new LoginApplication();
         try {

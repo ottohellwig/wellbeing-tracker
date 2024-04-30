@@ -5,14 +5,14 @@ public class User {
     private String email;
     private String password;
 
-    // Constructor
+    // Constructor method
     public User(String name, String email, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
     }
 
-    // Getters and Setters
+    // Getter and setter methods
     public String getName() {
         return name;
     }
