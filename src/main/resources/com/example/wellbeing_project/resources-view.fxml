@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
@@ -15,4 +12,9 @@
     </padding>
     <fx:include source="navigationBar-view.fxml"/>
     <Label text="Wellbeing Resources" />
+    <Hyperlink fx:id="resource1" text="Resource 1" />
+    <Hyperlink fx:id="resource2" text="Resource 2" />
+    <Hyperlink fx:id="resource3" text="Resource 3" />
+
+
 </VBox>
