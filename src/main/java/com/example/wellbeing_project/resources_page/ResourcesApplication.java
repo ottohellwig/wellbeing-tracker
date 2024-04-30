@@ -14,14 +14,14 @@ public class ResourcesApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // Get fxml document
-        Parent root = FXMLLoader.load(getClass().getResource("/resources_page-view.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/wellbeing_project/resources_page-view.fxml"));
         stage.setTitle("Wellbeing Tracker");
 
         // Create scene
         Scene scene = new Scene(root, 800, 500);
 
         // CSS stylesheet
-        String stylesheet = com.example.wellbeing_project.signup.SignupApplication.class.getResource("/stylesheet2.css").toExternalForm();
+        String stylesheet = com.example.wellbeing_project.signup.SignupApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
 
         // Apply CSS Stylesheet
         scene.getStylesheets().add(stylesheet);
