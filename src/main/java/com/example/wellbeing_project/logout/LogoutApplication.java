@@ -13,14 +13,14 @@ public class LogoutApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         // Retrieve fmxl document
-        Parent root = FXMLLoader.load(getClass().getResource("/logout-view.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/example/wellbeing_project/logout-view.fxml"));
         stage.setTitle("Wellbeing Tracker");
 
         // Create a scene and set the root
         Scene scene = new Scene(root, 400, 300);
 
         // Load CSS stylesheet
-        String stylesheet = LogoutApplication.class.getResource("/stylesheet2.css").toExternalForm();
+        String stylesheet = LogoutApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
 
         // Apply stylesheet to scene
         scene.getStylesheets().add(stylesheet);
