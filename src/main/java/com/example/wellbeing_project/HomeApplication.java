@@ -15,6 +15,11 @@ public class HomeApplication extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("home-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(),WIDTH,HEIGHT);
+        // Load  CSS stylesheet
+        String stylesheet = LoginApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
+
+        // Apply stylesheet to scene
+        scene.getStylesheets().add(stylesheet);
         stage.setTitle(TITLE);
         stage.setScene(scene);
         stage.show();
