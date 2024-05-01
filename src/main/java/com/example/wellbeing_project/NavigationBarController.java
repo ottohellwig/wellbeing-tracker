@@ -24,6 +24,11 @@ public class NavigationBarController
         Stage stage = (Stage) homeButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("home-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HomeApplication.WIDTH, HomeApplication.HEIGHT);
+        // Load  CSS stylesheet
+        String stylesheet = LoginApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
+
+        // Apply stylesheet to scene
+        scene.getStylesheets().add(stylesheet);
         stage.setScene(scene);
     }
 
@@ -32,6 +37,11 @@ public class NavigationBarController
         Stage stage = (Stage) reportsButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("reports-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HomeApplication.WIDTH, HomeApplication.HEIGHT);
+        // Load  CSS stylesheet
+        String stylesheet = LoginApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
+
+        // Apply stylesheet to scene
+        scene.getStylesheets().add(stylesheet);
         stage.setScene(scene);
     }
 
@@ -40,6 +50,11 @@ public class NavigationBarController
         Stage stage = (Stage) resourcesButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("resources-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HomeApplication.WIDTH, HomeApplication.HEIGHT);
+        // Load  CSS stylesheet
+        String stylesheet = LoginApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
+
+        // Apply stylesheet to scene
+        scene.getStylesheets().add(stylesheet);
         stage.setScene(scene);
     }
 
@@ -48,6 +63,11 @@ public class NavigationBarController
         Stage stage = (Stage) logoutButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("logout-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HomeApplication.WIDTH, HomeApplication.HEIGHT);
+        // Load  CSS stylesheet
+        String stylesheet = LoginApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
+
+        // Apply stylesheet to scene
+        scene.getStylesheets().add(stylesheet);
         stage.setScene(scene);
     }
 }
