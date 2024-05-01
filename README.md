@@ -7,8 +7,7 @@
 ![SQLite](https://img.shields.io/badge/sqlite-%2307405e.svg?style=for-the-badge&logo=sqlite&logoColor=white)&nbsp;
 ![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
   
-![image](https://github.com/ottohellwig/cab302-wellbeing-project/assets/105997582/907db74f-e211-4fec-b152-5af2f854d50a)
-
+![image](https://github.com/ottohellwig/cab302-wellbeing-project/assets/105997582/13c5cf27-e57d-447b-92ce-e36ed4246220)
 
 </div>
 
