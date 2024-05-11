@@ -7,6 +7,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
 <VBox alignment="TOP_LEFT" spacing="20.0"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.wellbeing_project.ReportsController">
@@ -15,4 +18,12 @@
     </padding>
     <fx:include source="navigationBar-view.fxml"/>
     <Label text="Activity Reports" />
+    <BarChart fx:id="barChart" prefWidth="600" prefHeight="400">
+        <xAxis>
+            <CategoryAxis label="Day" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis label="Time" />
+        </yAxis>
+    </BarChart>
 </VBox>
