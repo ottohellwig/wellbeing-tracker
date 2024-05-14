@@ -10,7 +10,7 @@
 <?import javafx.scene.chart.BarChart?>
 <?import javafx.scene.chart.CategoryAxis?>
 <?import javafx.scene.chart.NumberAxis?>
-<VBox alignment="TOP_LEFT" spacing="20.0"
+<VBox spacing="20.0"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.wellbeing_project.ReportsController">
     <padding>
@@ -18,12 +18,20 @@
     </padding>
     <fx:include source="navigationBar-view.fxml"/>
     <Label text="Activity Reports" />
+    <HBox spacing="10.0">
+        <Button fx:id="weeklyReportButton" text="Weekly" onAction="#showWeeklyReport"/>
+        <Button fx:id="dailyReportButton" text="Daily" onAction="#showDailyReport"/>
+    </HBox>
+    <VBox spacing="1.0">
+        <Label text="Average" />
+        <Label fx:id="averageLabel" />
+    </VBox>
     <BarChart fx:id="barChart" prefWidth="600" prefHeight="400">
         <xAxis>
-            <CategoryAxis label="Day" />
+            <CategoryAxis />
         </xAxis>
         <yAxis>
-            <NumberAxis label="Time" />
+            <NumberAxis />
         </yAxis>
     </BarChart>
 </VBox>
