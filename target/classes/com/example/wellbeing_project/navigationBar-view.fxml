@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox alignment="CENTER" spacing="10.0" xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.wellbeing_project.NavigationBarController">
+        <Button fx:id="homeButton" text="Home" onAction="#onHomeButtonClick"/>
+        <Button fx:id="reportsButton" text="Reports" onAction="#onReportsButtonClick"/>
+        <Button fx:id="resourcesButton" text="Resources" onAction="#onResourcesButtonClick"/>
+        <Button fx:id="logoutButton" text="Logout" onAction="#onLogoutButtonClick"/>
+</HBox>

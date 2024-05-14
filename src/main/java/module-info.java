@@ -3,6 +3,7 @@ module com.example.wellbeing_project {
     requires javafx.fxml;
     requires java.sql;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
     requires java.prefs;
     requires jbcrypt;
 
