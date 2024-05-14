@@ -13,45 +13,53 @@ import javafx.stage.Stage;
 
 // Constructor method
 public class SignupController {
+
     @FXML
     private TextField nameField;
+
     @FXML
     private TextField emailField;
+
     @FXML
     private PasswordField passwordField;
 
-    // Method to store user inputs to variables and create a new user class
+    // Method to manage signup
     @FXML
-    private void manageSignup() {
-        String name = nameField.getText();
-        String email = emailField.getText();
+    void manageSignup() {
+        // Get data from the form fields
+        String name = nameField.getText().trim();
+        String email = emailField.getText().trim();
         String password = passwordField.getText();
 
-        User user = new User(name, email, password);
-        if (signup(user)) {
-            System.out.println("Signup successful!");
-        } else {
-            ErrorAlert.displayError("Sign Up Failed", "Invalid email or password.");
+        // Check if any field is empty
+        if (name.isEmpty() || email.isEmpty() || password.isEmpty()) {
+            ErrorAlert.displayError("Error", "Please fill in all fields.");
+            return;
+        }
+
+        // Create a new AppUser object
+        AppUser newUser = new AppUser(name, email, password);
+
+        // Add the user to the database
+        DBAppUserDao userDao = new DBAppUserDao();
+        try {
+            userDao.addUser(newUser);
+            // Show success message or navigate to login page
+            System.out.println("User added successfully!");
+            // If you want to navigate to the login page, uncomment the next line
+            // openLogin();
+        } catch (Exception e) {
+            e.printStackTrace();
+            ErrorAlert.displayError("Error", "Failed to add user to the database.");
         }
     }
 
-    // Create method to insert new user data into database, or display error if unable to
-    private boolean signup(User user) {
-        // SQL query variable
-        String query = "INSERT INTO User (email, name, password) VALUES (?, ?, ?)";
-        // Connect to database
-        try (Connection conn = ConnectDatabase.connect();
-             // Query execution steps
-             PreparedStatement pstmt = conn.prepareStatement(query)) {
-            pstmt.setString(1, user.getEmail());
-            pstmt.setString(2, user.getName());
-            pstmt.setString(3, user.getPassword());
-            pstmt.executeUpdate();
-            return true;
-        } catch (SQLException e) {
-            System.out.println("Signup error: " + e.getMessage()); // See errors
-            return false;
-        }
+    // Method to open login page
+    @FXML
+    void startLogin() {
+        SignupApplication signupApplication = new SignupApplication();
+        Stage stage = (Stage) nameField.getScene().getWindow(); // get the current stage
+        signupApplication.openLogin(stage);
     }
 
     @FXML
