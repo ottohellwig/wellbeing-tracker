@@ -11,6 +11,9 @@ import java.io.IOException;
 
 // Constructor method
 public class SignupApplication extends Application {
+
+    public static final double WIDTH = 400;
+    public static final double HEIGHT = 500;
     @Override
     public void start(Stage stage) throws IOException {
         // Retrieve fxml document
@@ -18,7 +21,7 @@ public class SignupApplication extends Application {
         stage.setTitle("Wellbeing Tracker");
 
         // Create scene
-        Scene scene = new Scene(root, 400, 500);
+        Scene scene = new Scene(root, WIDTH, HEIGHT);
 
         // CSS stylesheet
         String stylesheet = SignupApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
