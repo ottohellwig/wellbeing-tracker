@@ -6,24 +6,29 @@ import java.util.List;
 import org.mindrot.jbcrypt.BCrypt;
 import java.sql.*;
 
+// Class implements app user interface
 public class DBAppUserDao implements IAppUserDAO {
+    // Create database connection
     private Connection connection;
-    private static final String SALT = BCrypt.gensalt(); // Generate a salt
+    // Generate a salt
+    private static final String SALT = BCrypt.gensalt(); 
 
     public DBAppUserDao() {
         // Get the connection instance from DBConnection
         connection = DBConnection.getInstance();
     }
+    // Method to create user and add to database
     @Override
     public void addUser(AppUser appUser) {
         String query = "INSERT INTO User (Name, Email, Password) VALUES (?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setString(1, AppUser.getName());
             statement.setString(2, AppUser.getEmail());
-            String hashedPassword = hashPassword(appUser.getPassword()); // Hash the password
+            // Hash the password
+            String hashedPassword = hashPassword(appUser.getPassword()); 
             statement.setString(3, hashedPassword);
             statement.executeUpdate();
-            connection.commit(); // Commit the transaction
+            connection.commit(); // Commit transaction
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -34,11 +39,12 @@ public class DBAppUserDao implements IAppUserDAO {
         return BCrypt.hashpw(plainTextPassword, SALT);
     }
 
-    // Method to verify a password
+    // Method to verify password
     public boolean verifyPassword(String plainTextPassword, String hashedPassword) {
         return BCrypt.checkpw(plainTextPassword, hashedPassword);
     }
 
+    // Method to update user entry in database
     @Override
     public void updateUser(AppUser appUser) {
         StringBuilder queryBuilder = new StringBuilder("UPDATE User SET");
@@ -57,7 +63,7 @@ public class DBAppUserDao implements IAppUserDAO {
             values.add(appUser.getPassword());
         }
 
-        // Remove the last comma
+        // Remove last comma
         queryBuilder.deleteCharAt(queryBuilder.length() - 1);
 
         queryBuilder.append(" WHERE UserID = ?");
@@ -68,9 +74,10 @@ public class DBAppUserDao implements IAppUserDAO {
             for (Object value : values) {
                 statement.setObject(index++, value);
             }
-            // Set the UserID for the WHERE clause
+            // Set the UserID for the WHERE 
             statement.setInt(index, appUser.getUserId());
 
+            // Debugging
             int rowsUpdated = statement.executeUpdate(); // Check the number of rows updated
             System.out.println("Rows updated: " + rowsUpdated); // Print the number of rows updated
             connection.commit(); // Commit the transaction
@@ -81,15 +88,13 @@ public class DBAppUserDao implements IAppUserDAO {
         }
     }
 
+    // Method from interface, not used
     @Override
     public void deleteUser(AppUser appUser) {
 
-    }
+    }    
 
-    public AppUser getUserByEmailAndPassword(String email, String password) {
-        return null;
-    }
-
+    // Method to retrieve current user
     public AppUser getUser(int userId) {
         String query = "SELECT * FROM User WHERE UserID = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
@@ -101,8 +106,7 @@ public class DBAppUserDao implements IAppUserDAO {
                         resultSet.getString("Email"),
                         resultSet.getString("Password")
                 );
-                user.setUserId(resultSet.getInt("UserID"));
-                // You may set other properties here if needed
+                user.setUserId(resultSet.getInt("UserID"));                
                 return user;
             }
         } catch (SQLException e) {
@@ -111,7 +115,7 @@ public class DBAppUserDao implements IAppUserDAO {
         return null;
     }
 
-    // Method to retrieve user by email from the database
+    // Method to retrieve user by email from database
     public AppUser getUserByEmail(String email) {
         String query = "SELECT * FROM User WHERE Email = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
@@ -123,8 +127,7 @@ public class DBAppUserDao implements IAppUserDAO {
                         resultSet.getString("Email"),
                         resultSet.getString("Password")
                 );
-                user.setUserId(resultSet.getInt("UserID")); // Set the user ID
-                // You may set other properties here if needed
+                user.setUserId(resultSet.getInt("UserID")); // Set the user ID                
                 return user;
             }
         } catch (SQLException e) {
@@ -132,7 +135,7 @@ public class DBAppUserDao implements IAppUserDAO {
         }
         return null;
     }
-
+    // Method from interface, not used
     @Override
     public List<AppUser> getAllUsers() {
         return null;
