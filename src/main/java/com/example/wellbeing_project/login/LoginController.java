@@ -23,10 +23,11 @@ public class LoginController {
 
     @FXML
     private CheckBox rememberMeCheckbox;
-
+    // Create new user database access object, then create a variable for the user preferences
     private final DBAppUserDao userDao = new DBAppUserDao();
     private static final Preferences prefs = Preferences.userNodeForPackage(LoginController.class);
 
+    // Method to retrieve user preferences on launch of application
     @FXML
     public void initialize() {
         // Load the saved user data
@@ -40,9 +41,9 @@ public class LoginController {
         // Get email and password entered by the user
         String email = emailField.getText().trim();
         String password = passwordField.getText();
-
+        // Retrieve user using email input
         AppUser user = userDao.getUserByEmail(email);
-
+        
         if (user != null && userDao.verifyPassword(password, user.getPassword())) {
             // Login successful
             if (rememberMeCheckbox.isSelected()) {
@@ -50,13 +51,13 @@ public class LoginController {
                 prefs.put("email", email);
                 prefs.putBoolean("remember", true);
             } else {
-                // Clear user data if remember me is unchecked
+                // Clear user data if remember me is not checked
                 prefs.remove("email");
                 prefs.putBoolean("remember", false);
             }
             // Set the logged-in user's ID in the session
             AppSession.setLoggedInUserId(user.getUserId());
-            // Proceed with the login process
+            // Continue login process
             try {
                 openHome();
             } catch (IOException e) {
@@ -84,7 +85,7 @@ public class LoginController {
         alert.setContentText(message);
         alert.showAndWait();
     }
-
+    
     @FXML
     private Button signupButton;
 
