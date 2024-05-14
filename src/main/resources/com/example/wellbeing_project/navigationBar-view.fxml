@@ -13,4 +13,5 @@
         <Button fx:id="reportsButton" text="Reports" onAction="#onReportsButtonClick"/>
         <Button fx:id="resourcesButton" text="Resources" onAction="#onResourcesButtonClick"/>
         <Button fx:id="logoutButton" text="Logout" onAction="#onLogoutButtonClick"/>
+        <Button fx:id="profileButton" text="Profile" onAction="#onProfileButtonClick"/>
 </HBox>
