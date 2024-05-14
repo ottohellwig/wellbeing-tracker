@@ -37,17 +37,15 @@ public class SignupController {
             return;
         }
 
-        // Create a new AppUser object
+        // Create new AppUser object
         AppUser newUser = new AppUser(name, email, password);
 
-        // Add the user to the database
+        // Add user to the database
         DBAppUserDao userDao = new DBAppUserDao();
         try {
             userDao.addUser(newUser);
-            // Show success message or navigate to login page
-            System.out.println("User added successfully!");
-            // If you want to navigate to the login page, uncomment the next line
-            // openLogin();
+            // Show success message
+            System.out.println("User added successfully!");            
         } catch (Exception e) {
             e.printStackTrace();
             ErrorAlert.displayError("Error", "Failed to add user to the database.");
@@ -65,7 +63,7 @@ public class SignupController {
     @FXML
     private Button loginButton;
 
-    // Method to launch login page from log in button
+    // Method to launch login page from login button
     @FXML
     private void startLogin(ActionEvent event) {
         // Get the stage from the button
