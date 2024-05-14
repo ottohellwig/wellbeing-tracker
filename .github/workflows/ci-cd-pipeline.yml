@@ -25,6 +25,7 @@ jobs:
       uses: actions/setup-java@v2
       with:
         java-version: '17'
+        distribution: 'adopt'
 
     # Step 3: Cache Maven packages
     - name: Cache Maven packages
