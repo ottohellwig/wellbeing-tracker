@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.format.TextStyle;
+import java.util.prefs.Preferences;
 
 // Constructor method
 public class LoginApplication extends Application {
@@ -20,7 +20,7 @@ public class LoginApplication extends Application {
         stage.setTitle("Wellbeing Tracker");
 
         // Create a scene and set the root
-        Scene scene = new Scene(root, 400, 500);
+        Scene scene = new Scene(root, SignupApplication.WIDTH, SignupApplication.HEIGHT);
 
         // Load  CSS stylesheet
         String stylesheet = LoginApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
@@ -32,6 +32,8 @@ public class LoginApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
+    // Variable for setting the remember me function in the login page
+    private static final Preferences prefs = Preferences.userNodeForPackage(LoginApplication.class);
 
     // Method to close stage and open signup stage
     public void openSignup(Stage stage) {
@@ -42,6 +44,12 @@ public class LoginApplication extends Application {
         } catch (Exception e) {
             e.printStackTrace(); // See errors
         }
+    }
+    // Save preferences of user on application close
+    @Override
+    public void stop() throws Exception {
+        prefs.flush();
+        super.stop();
     }
 
     // Method to close stage and open signup stage
