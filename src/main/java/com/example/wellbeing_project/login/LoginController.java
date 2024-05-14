@@ -4,63 +4,76 @@ import com.example.wellbeing_project.signup.SignupApplication;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import com.example.wellbeing_project.universal.*;
+import com.example.wellbeing_project.universal.AppUser;
+import com.example.wellbeing_project.universal.DBAppUserDao;
+import com.example.wellbeing_project.universal.AppSession;
+import com.example.wellbeing_project.HomeApplication;
+import java.util.prefs.Preferences;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class LoginController {
 
     @FXML
     private TextField emailField;
+
     @FXML
     private PasswordField passwordField;
 
-    // Sign in method that retrieves user input if correct, otherwise displays error
     @FXML
-    private void signin() {
-        String email = emailField.getText();
+    private CheckBox rememberMeCheckbox;
+
+    private final DBAppUserDao userDao = new DBAppUserDao();
+    private static final Preferences prefs = Preferences.userNodeForPackage(LoginController.class);
+
+    @FXML
+    public void initialize() {
+        // Load the saved user data
+        emailField.setText(prefs.get("email", ""));
+        rememberMeCheckbox.setSelected(prefs.getBoolean("remember", false));
+    }
+
+    // Method to handle signin
+    @FXML
+    void signin() {
+        // Get email and password entered by the user
+        String email = emailField.getText().trim();
         String password = passwordField.getText();
 
-        if (login(email, password)) {
-            System.out.println("Login successful!");
-            // Get stage
-            Stage stage = (Stage) emailField.getScene().getWindow();
+        AppUser user = userDao.getUserByEmail(email);
 
-            // Call openHomeApplication method from LoginApplication class
-            LoginApplication loginApp = new LoginApplication();
-            loginApp.openHomeApplication(stage);
+        if (user != null && userDao.verifyPassword(password, user.getPassword())) {
+            // Login successful
+            if (rememberMeCheckbox.isSelected()) {
+                // Save user data if remember me is checked
+                prefs.put("email", email);
+                prefs.putBoolean("remember", true);
+            } else {
+                // Clear user data if remember me is unchecked
+                prefs.remove("email");
+                prefs.putBoolean("remember", false);
+            }
+            // Set the logged-in user's ID in the session
+            AppSession.setLoggedInUserId(user.getUserId());
+            // Proceed with the login process
+            try {
+                openHome();
+            } catch (IOException e) {
+                e.printStackTrace();
+                showErrorAlert("Error", "Failed to open the home page.");
+            }
         } else {
-            System.out.println("Login failed!");
-            // Show error message
-            showErrorAlert("Login Failed", "Invalid email or password.");
+            // Login failed
+            showErrorAlert("Error", "Invalid email or password.");
         }
     }
 
-    // Method that determines whether user is registered in database
-    private boolean login(String email, String password) {
-        // SQL query
-        String query = "SELECT * FROM User WHERE email = ?";
-        // Connect to database and determine whether email is registered
-        try (Connection conn = ConnectDatabase.connect();
-             PreparedStatement pstmt = conn.prepareStatement(query)) {
-            pstmt.setString(1, email);
-            ResultSet rs = pstmt.executeQuery();
-            // If executed, email exists within the database
-            if (rs.next()) {
-                // Variable assigned to password related to email
-                String dbPassword = rs.getString("password");
-                // Check if the entered password matches the one in the database
-                if (dbPassword.equals(password)) {
-                    return true; // Login successful
-                }
-            }
-        } catch (SQLException e) {
-            System.out.println("Login error: " + e.getMessage()); // See errors
-        }
-        return false; // Login failed
+    // Method to open the home page
+    private void openHome() throws IOException {
+        HomeApplication homeApplication = new HomeApplication();
+        Stage stage = (Stage) emailField.getScene().getWindow();
+        homeApplication.start(stage);
     }
 
     // Error Alert class call
@@ -77,7 +90,7 @@ public class LoginController {
 
     // Method that launches sign up page from sign up button
     @FXML
-    private void startSignup(ActionEvent event) {
+    private void startSignup() {
         // Get stage
         Stage stage = (Stage) signupButton.getScene().getWindow();
 
