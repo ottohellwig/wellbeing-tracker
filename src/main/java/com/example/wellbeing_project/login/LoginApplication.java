@@ -9,7 +9,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
-import java.time.format.TextStyle;
+import java.util.prefs.Preferences;
 
 // Constructor method
 public class LoginApplication extends Application {
@@ -33,6 +33,8 @@ public class LoginApplication extends Application {
         stage.show();
     }
 
+    private static final Preferences prefs = Preferences.userNodeForPackage(LoginApplication.class);
+
     // Method to close stage and open signup stage
     public void openSignup(Stage stage) {
         SignupApplication signup = new SignupApplication();
@@ -42,6 +44,12 @@ public class LoginApplication extends Application {
         } catch (Exception e) {
             e.printStackTrace(); // See errors
         }
+    }
+
+    @Override
+    public void stop() throws Exception {
+        prefs.flush();
+        super.stop();
     }
 
     // Method to close stage and open signup stage
