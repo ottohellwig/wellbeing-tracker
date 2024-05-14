@@ -11,9 +11,10 @@ import java.io.IOException;
 
 // Constructor method
 public class SignupApplication extends Application {
-
+    // Variables for height and width of some pages
     public static final double WIDTH = 400;
     public static final double HEIGHT = 500;
+    
     @Override
     public void start(Stage stage) throws IOException {
         // Retrieve fxml document
