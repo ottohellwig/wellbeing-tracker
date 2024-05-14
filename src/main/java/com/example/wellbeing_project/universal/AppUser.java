@@ -1,6 +1,7 @@
 package com.example.wellbeing_project.universal;
 
 public class AppUser {
+    // Variables linked to database, possibly not needed
     private static int userId;
     private int reportId;
     private int timerId;
@@ -14,13 +15,13 @@ public class AppUser {
     private int startTime;
     private int endTime;
 
-
+    // User constructor
     public AppUser(String name, String email, String password) {
         this.name = name;
         this.email = email;
         this.password = password;
     }
-
+    // Getter and Setter methods
     public static int getUserId() {
         return userId;
     }
