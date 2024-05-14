@@ -27,7 +27,7 @@
 
         <Label text="Password:"/>
         <PasswordField fx:id="passwordField"/>
-        <CheckBox text="Remember me"/>
+        <CheckBox fx:id="rememberMeCheckbox" text="Remember me"/>
     </VBox>
 
     <VBox alignment="CENTER" spacing="20.0">
