@@ -36,11 +36,11 @@ public class ProfileController {
         // Get the logged-in user's ID
         int userId = AppSession.getLoggedInUserId();
 
-        // Fetch the existing user from the database
+        // Retrrieve existing user from the database
         DBAppUserDao userDao = new DBAppUserDao();
         AppUser existingUser = userDao.getUser(userId);
 
-        // Create an updated AppUser object with non-null fields
+        // Create updated AppUser object, ignoring empty fields
         AppUser updatedUser = new AppUser(
                 name.isEmpty() ? existingUser.getName() : name,
                 email.isEmpty() ? existingUser.getEmail() : email,
@@ -48,10 +48,10 @@ public class ProfileController {
         );
         updatedUser.setUserId(userId);
 
-        // Update the user in the database
-        userDao.updateUser(updatedUser); // Update user information
+        // Update user details in the database
+        userDao.updateUser(updatedUser); 
 
-        // Show a confirmation message
+        // Show  confirmation message
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setTitle("Success");
         alert.setHeaderText(null);
@@ -62,14 +62,14 @@ public class ProfileController {
     public void initialize() {
         // Get the logged-in user's ID from AppSession
         int userId = AppSession.getLoggedInUserId();
-        System.out.println("Logged-in user ID: " + userId); // Print the logged-in user's ID for debugging
+        System.out.println("Logged-in user ID: " + userId); // Used for debugging, ensuring correct user retrieved
 
-        // Fetch user information from the database
+        // Retrieve user information from the database
         DBAppUserDao userDao = new DBAppUserDao();
         AppUser user = userDao.getUser(userId);
-        System.out.println("Retrieved user: " + user); // Print the retrieved user for debugging
+        System.out.println("Retrieved user: " + user); // Print retrieved user for debugging
 
-        // Populate fields with user information
+        // Insert current user information
         nameField.setText(user.getName());
         emailField.setText(user.getEmail());
     }
