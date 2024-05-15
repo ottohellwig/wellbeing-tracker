@@ -1,12 +1,17 @@
 package com.example.wellbeing_project;
 
+import com.example.wellbeing_project.universal.ConnectDatabase;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.util.Duration;
-import javafx.application.Platform;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
 import java.util.concurrent.atomic.AtomicInteger;
 
 public class HomeController {
@@ -50,5 +55,28 @@ public class HomeController {
         }
     }
 
+private void insertIntoDatabase(int hours, int minutes, int seconds){
 
+      try {
+          int totalDurationInSeconds = hours * 60 + minutes + (seconds > 0 ? 1 : 0);
+
+          Connection conn = ConnectDatabase.connect();
+
+          String query = "INSERT INTO Timers (DurationInSeconds) VALUES (?)";
+
+          PreparedStatement preptimer = conn.prepareStatement(query);
+          preptimer.setInt(1, totalDurationInSeconds);
+
+          preptimer.executeUpdate();
+
+          preptimer.close();
+          ;
+          conn.close();
+          ;
+      } catch (SQLException ex) {
+          throw new RuntimeException(ex);
+      }
+
+
+    }
 }
