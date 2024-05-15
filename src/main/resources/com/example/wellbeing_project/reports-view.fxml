@@ -23,7 +23,6 @@
         <Button fx:id="dailyReportButton" text="Daily" onAction="#showDailyReport"/>
     </HBox>
     <VBox spacing="1.0">
-        <Label text="Average" />
         <Label fx:id="averageLabel" />
     </VBox>
     <BarChart fx:id="barChart" prefWidth="600" prefHeight="400">
