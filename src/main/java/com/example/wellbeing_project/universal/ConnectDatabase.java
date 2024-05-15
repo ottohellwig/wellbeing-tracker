@@ -4,9 +4,10 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
 public class ConnectDatabase {
     // Create variable that holds URL to SQLite database
-    private static final String URL = "jdbc:sqlite:Wellness_Tracker.db/";
+    private static final String URL = "jdbc:sqlite:/C:/Users/Kodee/IdeaProjects/cab302-wellbeing-project/Wellness_Tracker.db/";
 
     // Create method to connect application to database
     public static Connection connect() {

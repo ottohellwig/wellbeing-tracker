@@ -70,9 +70,9 @@ private void insertIntoDatabase(int hours, int minutes, int seconds){
           preptimer.executeUpdate();
 
           preptimer.close();
-          ;
+
           conn.close();
-          ;
+
       } catch (SQLException ex) {
           throw new RuntimeException(ex);
       }
