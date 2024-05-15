@@ -62,11 +62,11 @@ public class LoginController {
                 openHome();
             } catch (IOException e) {
                 e.printStackTrace();
-                showErrorAlert("Error", "Failed to open the home page.");
+                ErrorAlert.displayError("Error", "Failed to open the home page.");
             }
         } else {
             // Login failed
-            showErrorAlert("Error", "Invalid email or password.");
+            ErrorAlert.displayError("Error", "Invalid email or password.");
         }
     }
 
@@ -75,16 +75,7 @@ public class LoginController {
         HomeApplication homeApplication = new HomeApplication();
         Stage stage = (Stage) emailField.getScene().getWindow();
         homeApplication.start(stage);
-    }
-
-    // Error Alert class call
-    private void showErrorAlert(String title, String message) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setTitle(title);
-        alert.setHeaderText(null);
-        alert.setContentText(message);
-        alert.showAndWait();
-    }
+    }    
     
     @FXML
     private Button signupButton;
