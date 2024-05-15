@@ -33,7 +33,7 @@ public class ProfileController {
         String email = emailField.getText().trim();
         String password = passwordField.getText().trim();
 
-        // Get the logged-in user's ID
+        // Get the logged in user's ID
         int userId = AppSession.getLoggedInUserId();
 
         // Retrrieve existing user from the database
@@ -60,7 +60,7 @@ public class ProfileController {
     }
 
     public void initialize() {
-        // Get the logged-in user's ID from AppSession
+        // Get the logged in user's ID from AppSession
         int userId = AppSession.getLoggedInUserId();
         System.out.println("Logged-in user ID: " + userId); // Used for debugging, ensuring correct user retrieved
 
