@@ -6,6 +6,8 @@ module com.example.wellbeing_project {
     requires java.desktop;
     requires java.prefs;
     requires jbcrypt;
+    requires com.sun.jna;
+    requires com.sun.jna.platform;
 
     opens com.example.wellbeing_project.signup to javafx.fxml;
     opens com.example.wellbeing_project.universal to javafx.fxml;
