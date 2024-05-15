@@ -15,7 +15,12 @@ public class AppUser {
     private int startTime;
     private int endTime;
 
-    // User constructor
+    /** User Constructor
+     *
+     * @param name - user name
+     * @param email - user email
+     * @param password - user password
+     */
     public AppUser(String name, String email, String password) {
         this.name = name;
         this.email = email;
@@ -25,7 +30,10 @@ public class AppUser {
     public static int getUserId() {
         return userId;
     }
-
+    /** User ID setter
+     * 
+     * @param userId - unique user ID
+     */
     public void setUserId(int userId) {
         this.userId = userId;
     }
