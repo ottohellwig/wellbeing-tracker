@@ -11,8 +11,15 @@ import javafx.util.Duration;
 import javafx.application.Platform;
 import java.util.concurrent.atomic.AtomicInteger;
 import javafx.animation.Animation;
-
+import com.sun.jna.Native;
+import com.sun.jna.platform.win32.WinDef.HWND;
+import com.sun.jna.platform.win32.WinUser;
+import java.util.concurrent.atomic.AtomicBoolean;
 public class HomeController {
+
+    private AtomicBoolean stopTracking = new AtomicBoolean(false);
+
+    private static final int MAX_TITLE_LENGTH = 1024;
     public Timeline timeline;
     public Label timeRemainingLabel;
 
@@ -55,6 +62,9 @@ public class HomeController {
             }
         }));
         timeline.playFromStart();
+
+        stopTracking.set(false);
+        new Thread(this::trackActiveWindow).start();
     }
 
     @FXML
@@ -64,6 +74,7 @@ public class HomeController {
                 timeline.play();
             } else {
                 timeline.pause();
+                stopTracking.set(true);
             }
         }
     }
@@ -93,5 +104,44 @@ public class HomeController {
         alert.setContentText("15 minutes have passed!");
 
         alert.showAndWait();
+    }
+
+    private void trackActiveWindow() {
+        String previousWindowTitle = "";
+        long startTime = System.currentTimeMillis();
+
+        while (!stopTracking.get()) {
+            String activeWindowTitle = getActiveWindowTitle();
+
+            if (!activeWindowTitle.equals(previousWindowTitle)) {
+                long endTime = System.currentTimeMillis();
+                long duration = endTime - startTime;
+
+                System.out.println("Window: " + previousWindowTitle + ", Duration: " + duration + " ms");
+
+                previousWindowTitle = activeWindowTitle;
+                startTime = System.currentTimeMillis();
+            }
+
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public String getActiveWindowTitle() {
+        byte[] windowText = new byte[512]; // Increase this if needed
+        HWND hWnd = User32.INSTANCE.GetForegroundWindow();
+        User32.INSTANCE.GetWindowTextA(hWnd, windowText, 512);
+        return Native.toString(windowText);
+    }
+
+    public interface User32 extends WinUser, com.sun.jna.Library {
+        User32 INSTANCE = (User32) Native.load("user32", User32.class);
+
+        HWND GetForegroundWindow();
+        int GetWindowTextA(HWND hWnd, byte[] lpString, int nMaxCount);
     }
 }

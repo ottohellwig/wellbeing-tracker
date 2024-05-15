@@ -4,6 +4,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
+<?import javafx.scene.image.ImageView?>
 <VBox alignment="TOP_LEFT" spacing="20.0"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.wellbeing_project.ResourcesController">
@@ -12,7 +13,19 @@
     </padding>
     <fx:include source="navigationBar-view.fxml"/>
     <Label text="Wellbeing Resources" />
-    <Hyperlink text="Resource 1" fx:id="Resource1"/>
-    <Hyperlink text="Resource 2" fx:id="Resource2"/>
-    <Hyperlink text="Resource 3" fx:id="Resource3"/>
+    <VBox>
+        <ImageView fx:id="image1" fitHeight="100" fitWidth="100"/>
+        <Hyperlink text="Resource 1" fx:id="Resource1"/>
+        <Label text="Description for Resource 1"/>
+    </VBox>
+    <VBox>
+        <ImageView fx:id="image2" fitHeight="100" fitWidth="100"/>
+        <Hyperlink text="Resource 2" fx:id="Resource2"/>
+        <Label text="Description for Resource 2"/>
+    </VBox>
+    <VBox>
+        <ImageView fx:id="image3" fitHeight="100" fitWidth="100"/>
+        <Hyperlink text="Resource 3" fx:id="Resource3"/>
+        <Label text="Description for Resource 3"/>
+    </VBox>
 </VBox>
