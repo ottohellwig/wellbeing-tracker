@@ -4,6 +4,7 @@ import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
+import javafx.scene.control.CheckBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.util.Duration;
@@ -65,5 +66,32 @@ public class HomeController {
                 timeline.pause();
             }
         }
+    }
+
+    @FXML
+    private CheckBox fifteenMinuteIntervalCheckbox;
+
+    private Timeline fifteenMinuteTimeline;
+
+    public void initialize() {
+        fifteenMinuteTimeline = new Timeline(new KeyFrame(Duration.minutes(15), event -> showPopup()));
+        fifteenMinuteTimeline.setCycleCount(Timeline.INDEFINITE);
+
+        fifteenMinuteIntervalCheckbox.selectedProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue) {
+                fifteenMinuteTimeline.play();
+            } else {
+                fifteenMinuteTimeline.stop();
+            }
+        });
+    }
+
+    private void showPopup() {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle("Information");
+        alert.setHeaderText(null);
+        alert.setContentText("15 minutes have passed!");
+
+        alert.showAndWait();
     }
 }
