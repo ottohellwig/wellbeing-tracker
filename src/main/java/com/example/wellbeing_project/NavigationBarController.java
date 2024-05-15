@@ -18,6 +18,8 @@ public class NavigationBarController
     @FXML
     private Button resourcesButton;
     @FXML
+    private Button focusPeriodButton;
+    @FXML
     private Button logoutButton;
 
     @FXML
@@ -52,6 +54,18 @@ public class NavigationBarController
         FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("resources-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HomeApplication.WIDTH, HomeApplication.HEIGHT);
         // Load  CSS stylesheet
+        String stylesheet = LoginApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
+
+        // Apply stylesheet to scene
+        scene.getStylesheets().add(stylesheet);
+        stage.setScene(scene);
+    }
+    @FXML
+    protected void onFocusPeriodButtonClick() throws IOException {
+        Stage stage = (Stage) focusPeriodButton.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("focus-period-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), HomeApplication.WIDTH, HomeApplication.HEIGHT);
+        // Load CSS stylesheet
         String stylesheet = LoginApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
 
         // Apply stylesheet to scene

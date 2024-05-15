@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox alignment="TOP_LEFT" spacing="20.0"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.wellbeing_project.HomeController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
+    <fx:include source="navigationBar-view.fxml"/>
+    <Label text="Activity Timer" />
+    <TextField fx:id="timerField" promptText="Enter time in seconds" />
+    <CheckBox text="15 minute interval break reminder" />
+    <Button text="Start Timer" onAction="#startTimer" />
+    <Button text="Pause Timer" onAction="#pauseTimer" />
+    <Label fx:id="timeRemainingLabel" text="Time Remaining:" />
+</VBox>

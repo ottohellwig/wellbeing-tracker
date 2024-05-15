@@ -12,5 +12,6 @@
         <Button fx:id="homeButton" text="Home" onAction="#onHomeButtonClick"/>
         <Button fx:id="reportsButton" text="Reports" onAction="#onReportsButtonClick"/>
         <Button fx:id="resourcesButton" text="Resources" onAction="#onResourcesButtonClick"/>
+        <Button fx:id="focusPeriodButton" text="Focus Period" onAction="#onFocusPeriodButtonClick"/>
         <Button fx:id="logoutButton" text="Logout" onAction="#onLogoutButtonClick"/>
 </HBox>
