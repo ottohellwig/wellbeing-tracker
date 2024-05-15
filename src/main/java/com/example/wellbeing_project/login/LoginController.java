@@ -8,6 +8,7 @@ import com.example.wellbeing_project.universal.AppUser;
 import com.example.wellbeing_project.universal.DBAppUserDao;
 import com.example.wellbeing_project.universal.AppSession;
 import com.example.wellbeing_project.HomeApplication;
+import com.example.wellbeing_project.universal.ErrorAlert;
 import java.util.prefs.Preferences;
 import javafx.stage.Stage;
 
