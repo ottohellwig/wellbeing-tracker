@@ -52,20 +52,12 @@ public class SignupController {
         }
     }
 
-    // Method to open login page
-    @FXML
-    void startLogin() {
-        SignupApplication signupApplication = new SignupApplication();
-        Stage stage = (Stage) nameField.getScene().getWindow(); // get the current stage
-        signupApplication.openLogin(stage);
-    }
-
     @FXML
     private Button loginButton;
 
     // Method to launch login page from login button
     @FXML
-    private void startLogin(ActionEvent event) {
+    private void startLogin() {
         // Get the stage from the button
         Stage stage = (Stage) loginButton.getScene().getWindow();
 
