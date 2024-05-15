@@ -43,3 +43,13 @@ jobs:
     # Step 5: Run tests with Maven
     - name: Run tests
       run: mvn test
+  #Step 6: Add Javadoc with Maven
+    - name: Generate Javadoc
+      run: mvn javadoc:javadoc
+
+ #Step 7: Publish Javadoc Pages to Github
+    - name: Deploy to GitHub Pages
+      uses: JamesIves/github-pages-deploy-action@v4
+      with:
+        folder: target/docs/javadoc
+
