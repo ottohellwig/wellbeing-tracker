@@ -77,6 +77,21 @@ public class NavigationBarController
     }
 
     @FXML
+    private void onFocusPeriodButtonClick() {
+        try {
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/wellbeing_project/focus-period-view.fxml"));
+            Parent root = loader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Set Focus Period");
+            stage.initModality(Modality.APPLICATION_MODAL);
+            stage.setScene(new Scene(root));
+            stage.showAndWait();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    @FXML
     protected void onProfileButtonClick() throws IOException {
         Stage stage = (Stage) profileButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("profile-view.fxml"));
