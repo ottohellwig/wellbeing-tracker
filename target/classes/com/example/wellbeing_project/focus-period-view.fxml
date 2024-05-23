@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<HBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.wellbeing_project.FocusPeriodController" spacing="20">
+    <VBox alignment="CENTER" spacing="10">
+        <children>
+            <Label text="Set Focus Period" />
+            <Label text="Task Name:" />
+            <TextField fx:id="taskNameField" promptText="Enter task name" />
+            <Label text="Start Time:" />
+            <TextField fx:id="startTimeField" promptText="HH:mm" />
+            <Label text="End Time:" />
+            <TextField fx:id="endTimeField" promptText="HH:mm" />
+            <Button text="Set Focus Period" onAction="#setFocusPeriod" />
+            <Label fx:id="focusStatusLabel" text="" />
+            <Button text="Back to Main Page" onAction="#goBackToMainPage" />
+        </children>
+        <padding>
+            <Insets top="20" right="20" bottom="20" left="20" />
+        </padding>
+    </VBox>
+    <VBox alignment="CENTER" spacing="10">
+        <children>
+            <Label text="Task List" />
+            <ListView fx:id="taskListView" />
+            <Button text="Mark as Complete" onAction="#markTaskAsComplete" />
+            <Button text="Mark as Not Complete" onAction="#markTaskAsNotComplete" />
+            <Button text="Delete Task" onAction="#deleteTask" />
+        </children>
+    </VBox>
+</HBox>
