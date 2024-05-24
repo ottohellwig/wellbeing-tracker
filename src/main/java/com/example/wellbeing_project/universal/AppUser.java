@@ -1,19 +1,21 @@
 package com.example.wellbeing_project.universal;
 
+import java.sql.Timestamp;
+
 public class AppUser {
     // Variables linked to database, possibly not needed
     private static int userId;
     private int reportId;
-    private int timerId;
+    private static int timerId;
     private int usageId;
     private static String name;
     private static String email;
     private static String password;
     private String reportDate;
-    private String timeName;
-    private int durationMinutes;
-    private int startTime;
-    private int endTime;
+    private static String timerName;
+    private static int durationMinutes;
+    private static Timestamp startTime;
+    private static Timestamp endTime;
 
     /** User Constructor
      *
@@ -94,36 +96,36 @@ public class AppUser {
         this.reportDate = reportDate;
     }
 
-    public String getTimeName() {
-        return timeName;
+    public static String getTimerName() {
+        return timerName;
     }
 
-    public void setTimeName(String timeName) {
-        this.timeName = timeName;
+    public static void setTimerName(String timerName) {
+        AppUser.timerName = timerName;
     }
 
-    public int getDurationMinutes() {
+    public static int getDurationMinutes() {
         return durationMinutes;
     }
 
-    public void setDurationMinutes(int durationMinutes) {
-        this.durationMinutes = durationMinutes;
+    public static void setDurationMinutes(int durationMinutes) {
+        AppUser.durationMinutes = durationMinutes;
     }
 
-    public int getStartTime() {
+    public static Timestamp getStartTime() {
         return startTime;
     }
 
-    public void setStartTime(int startTime) {
-        this.startTime = startTime;
+    public static void setStartTime(Timestamp startTime) {
+        AppUser.startTime = startTime;
     }
 
-    public int getEndTime() {
+    public static Timestamp getEndTime() {
         return endTime;
     }
 
-    public void setEndTime(int endTime) {
-        this.endTime = endTime;
+    public static void setEndTime(Timestamp endTime) {
+        AppUser.endTime = endTime;
     }
 
 }
