@@ -5,9 +5,6 @@ import java.sql.Timestamp;
 public class AppUser {
     // Variables linked to database, possibly not needed
     private static int userId;
-    private int reportId;
-    private static int timerId;
-    private int usageId;
     private static String name;
     private static String email;
     private static String password;
@@ -64,37 +61,6 @@ public class AppUser {
         this.password = password;
     }
 
-    public int getReportId() {
-        return reportId;
-    }
-
-    public void setReportId(int reportId) {
-        this.reportId = reportId;
-    }
-
-    public int getTimerId() {
-        return timerId;
-    }
-
-    public void setTimerId(int timerId) {
-        this.timerId = timerId;
-    }
-
-    public int getUsageId() {
-        return usageId;
-    }
-
-    public void setUsageId(int usageId) {
-        this.usageId = usageId;
-    }
-
-    public String getReportDate() {
-        return reportDate;
-    }
-
-    public void setReportDate(String reportDate) {
-        this.reportDate = reportDate;
-    }
 
     public static String getTimerName() {
         return timerName;

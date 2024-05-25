@@ -14,12 +14,14 @@ public class UsageDAO {
         // Get the connection instance from DBConnection
         connection = DBConnection.getInstance();
     }
-    public void addUsage() {
-        String query = "INSERT INTO Usage (UserId, StartTime, EndTime) VALUES (?, ?, ?)";
+    // Add app data that user is using to database
+    public void addUsage(String appName, Timestamp startTime, Timestamp endTime) {
+        String query = "INSERT INTO Usage (UserId, AppName, StartTime, EndTime) VALUES (?, ?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, AppUser.getUserId());
-            statement.setTimestamp(2, AppUser.getStartTime());
-            statement.setTimestamp(3, AppUser.getEndTime());
+            statement.setString(2, appName);
+            statement.setTimestamp(3, startTime);
+            statement.setTimestamp(4, endTime);
             statement.executeUpdate();
             connection.commit(); // Commit transaction
         } catch (SQLException e) {

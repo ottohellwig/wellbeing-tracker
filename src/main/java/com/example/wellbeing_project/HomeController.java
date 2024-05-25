@@ -18,6 +18,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 import dao.TimerDAO;
 import java.sql.Timestamp;
 import com.example.wellbeing_project.universal.AppUser;
+import dao.UsageDAO;
 public class HomeController {
 
     private AtomicBoolean stopTracking = new AtomicBoolean(false);
@@ -71,10 +72,10 @@ public class HomeController {
         stopTracking.set(false);
         new Thread(this::trackActiveWindow).start();
 
-        // Set up AppUser with timer details
+        // Create Timer name variable and default option
         String timerNameText = TimerName.getText();
         if (timerNameText == null || timerNameText.trim().isEmpty()) {
-            // Handle the error or set a default value
+            // Set default value
             timerNameText = "Random Timer";
         }
         AppUser.setTimerName(timerNameText);
@@ -139,6 +140,7 @@ public class HomeController {
     private void trackActiveWindow() {
         String previousWindowTitle = "";
         long startTime = System.currentTimeMillis();
+        UsageDAO usageDAO = new UsageDAO();
 
         while (!stopTracking.get()) {
             String activeWindowTitle = getActiveWindowTitle();
@@ -148,6 +150,13 @@ public class HomeController {
                 long duration = endTime - startTime;
 
                 System.out.println("Window: " + previousWindowTitle + ", Duration: " + duration + " ms");
+
+                // Add previous app used to database
+                if (!previousWindowTitle.isEmpty()) {
+                    Timestamp startTimestamp = new Timestamp(startTime);
+                    Timestamp endTimestamp = new Timestamp(endTime);
+                    usageDAO.addUsage(previousWindowTitle, startTimestamp, endTimestamp);
+                }
 
                 previousWindowTitle = activeWindowTitle;
                 startTime = System.currentTimeMillis();
@@ -162,7 +171,7 @@ public class HomeController {
     }
 
     public String getActiveWindowTitle() {
-        byte[] windowText = new byte[512]; // Increase this if needed
+        byte[] windowText = new byte[512];
         HWND hWnd = User32.INSTANCE.GetForegroundWindow();
         User32.INSTANCE.GetWindowTextA(hWnd, windowText, 512);
         return Native.toString(windowText);
