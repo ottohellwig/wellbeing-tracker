@@ -27,10 +27,17 @@
     </VBox>
     <BarChart fx:id="barChart" prefWidth="600" prefHeight="400">
         <xAxis>
-            <CategoryAxis />
+            <CategoryAxis fx:id="xAxis" />
         </xAxis>
         <yAxis>
-            <NumberAxis />
+            <NumberAxis fx:id="yAxis" label="Hours"/>
         </yAxis>
     </BarChart>
+    <Hyperlink fx:id="detailedActivityLink" text="See detailed activity" onAction="#showDetailedActivityClick"/>
+    <TableView fx:id="detailedActivityTable" visible="false">
+        <columns>
+            <TableColumn fx:id="applicationColumn" text="Application" />
+            <TableColumn fx:id="timeSpentColumn" text="Time Spent" />
+        </columns>
+    </TableView>
 </VBox>
