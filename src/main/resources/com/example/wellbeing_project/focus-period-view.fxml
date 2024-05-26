@@ -14,9 +14,9 @@
             <Label text="Task Name:" styleClass="label"/>
             <TextField fx:id="taskNameField" promptText="Enter task name" styleClass="text-field"/>
             <Label text="Start Time:" styleClass="label"/>
-            <TextField fx:id="startTimeField" promptText="HH:mm" styleClass="text-field"/>
+            <TextField fx:id="startTimeField" promptText="HH:mm" styleClass="text-field small-text"/>
             <Label text="End Time:" styleClass="label"/>
-            <TextField fx:id="endTimeField" promptText="HH:mm" styleClass="text-field"/>
+            <TextField fx:id="endTimeField" promptText="HH:mm" styleClass="text-field small-text"/>
             <Button text="Set Focus Period" onAction="#setFocusPeriod" styleClass="button"/>
             <Label fx:id="focusStatusLabel" text="" styleClass="label"/>
             <Button text="Back to Main Page" onAction="#goBackToMainPage" styleClass="button"/>

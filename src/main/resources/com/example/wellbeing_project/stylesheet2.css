@@ -36,13 +36,19 @@
 
 /* TextField styling */
 .text-field {
-    -fx-background-color: #DDA0DD; /* Plum */
+    -fx-background-color: #E6E6FA; /* Light Lavender */
     -fx-text-fill: black;
     -fx-font-size: 14px;
     -fx-padding: 5px;
     -fx-border-radius: 5px;
     -fx-background-radius: 5px;
     -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 3, 0, 1, 1);
+    -fx-font-weight: normal;
+}
+
+/* Prompt text styling inside TextField */
+.text-field .text {
+    -fx-fill: black; /* black*/
 }
 
 /* ListView styling */
@@ -68,11 +74,25 @@
     -fx-background-color: #b19cd9; /* Lightened Plum */
 }
 
-/* Custom styles for task completion */
+/* task completion */
 .task-complete {
     -fx-background-color: lightgreen;
 }
 
 .task-not-complete {
     -fx-background-color: lightcoral;
+}
+
+/* Small text visibility */
+.small-text {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: normal;
+}
+
+/* CheckBox styling */
+.check-box {
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-font-weight: normal;
 }

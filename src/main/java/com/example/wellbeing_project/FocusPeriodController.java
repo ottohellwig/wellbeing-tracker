@@ -75,13 +75,14 @@ public class FocusPeriodController {
             Stage stage = (Stage) taskNameField.getScene().getWindow();
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/example/wellbeing_project/home-view.fxml"));
             Parent root = loader.load();
-            Scene scene = new Scene(root);
+            Scene scene = new Scene(root, 890, 500);
             scene.getStylesheets().add(getClass().getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm());
             stage.setScene(scene);
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
+
 
     @FXML
     private void markTaskAsComplete() {
