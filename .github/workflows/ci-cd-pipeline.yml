@@ -51,7 +51,7 @@ jobs:
 
       #Step 7: Publish Javadoc
     - name: Publish Javadoc
-      uses: JamesIves/github-pages-deploy-action@v2
+      uses: JamesIves/github-pages-deploy-action@v4
       with:
         folder: target/docs/javadoc
 
