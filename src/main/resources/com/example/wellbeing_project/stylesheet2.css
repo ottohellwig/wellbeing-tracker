@@ -1,60 +1,78 @@
+/* stylesheet2.css */
 
-/* Set general button settings */
-/* Select all buttons and set the background color to red
-and the text color to white */
+/* Root pane styling */
+.root {
+    -fx-background-color: #4b0082; /* Indigo background */
+    -fx-padding: 20px;
+    -fx-font-family: "Segoe UI", sans-serif;
+}
+
+/* Button styling */
 .button {
-    -fx-background-color: BlueViolet;
+    -fx-background-color: #9370DB; /* Medium Purple */
     -fx-text-fill: white;
-    -fx-border-color: white;
-    -fx-border-radius: 5;
+    -fx-font-size: 14px;
+    -fx-padding: 10px 20px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.3), 5, 0, 2, 2);
 }
 
-/* Set color of button when mouse hovers over it */
 .button:hover {
-    -fx-background-color: #2e2e2e;
+    -fx-background-color: #b19cd9; /* Lightened Medium Purple */
 }
 
-
-/* Set color of button with fx:id="signinBtn" */
-
-/* Set color of node with fx:id="confirmBtn" */
-#signinBtn {
-    -fx-background-color: #E22BDE;
-    -fx-font-weight: bold;
+.button:pressed {
+    -fx-background-color: #6a5acd; /* Darkened Medium Purple */
 }
 
-#title {
-    -fx-font-size: 24px;
-    -fx-font-weight: bold;
-}
-
-#subtitle {
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-}
-
-#subtitle2 {
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-}
-
-
-.text-field {
-    -fx-background-color: white;
-    -fx-text-fill: black;
-    -fx-border-color: black;
-    -fx-border-radius: 2;
-}
-
+/* Label styling */
 .label {
     -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-padding: 5px 0;
 }
 
-.check-box {
-    -fx-text-fill: white;
+/* TextField styling */
+.text-field {
+    -fx-background-color: #DDA0DD; /* Plum */
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+    -fx-padding: 5px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-effect: dropshadow(one-pass-box, rgba(0,0,0,0.1), 3, 0, 1, 1);
 }
 
-/* Set the root color to Indigo */
-.root {
-    -fx-background-color: Indigo;
+/* ListView styling */
+.list-view {
+    -fx-background-color: #DDA0DD; /* Plum */
+    -fx-control-inner-background: #DDA0DD;
+    -fx-border-color: transparent;
+    -fx-background-radius: 5px;
+}
+
+/* ListCell styling */
+.list-cell {
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-background-color: transparent;
+}
+
+.list-cell:selected {
+    -fx-background-color: #b19cd9; /* Lightened Plum */
+}
+
+.list-cell:focused {
+    -fx-background-color: #b19cd9; /* Lightened Plum */
+}
+
+/* Custom styles for task completion */
+.task-complete {
+    -fx-background-color: lightgreen;
+}
+
+.task-not-complete {
+    -fx-background-color: lightcoral;
 }
