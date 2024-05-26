@@ -6,18 +6,33 @@ import java.util.List;
 import org.mindrot.jbcrypt.BCrypt;
 import java.sql.*;
 
-// Class implements app user interface
+
+
+/**
+ * Data Access Object (DAO) class for managing AppUser data in the database
+ * Implements the IAppUserDAO interface.
+ */
 public class DBAppUserDao implements IAppUserDAO {
     // Create database connection
     private Connection connection;
     // Generate a salt
-    private static final String SALT = BCrypt.gensalt(); 
+    private static final String SALT = BCrypt.gensalt();
+
+    /**
+     * Constructor for the DBAppUserDao Class.
+     * Initializes the database connection.
+     */
 
     public DBAppUserDao() {
         // Get the connection instance from DBConnection
         connection = DBConnection.getInstance();
     }
-    // Method to create user and add to database
+
+    /**
+     * Adds a new user to the database.
+     * @param appUser the AppUser object to be added to the database.
+     */
+
     @Override
     public void addUser(AppUser appUser) {
         String query = "INSERT INTO User (Name, Email, Password) VALUES (?, ?, ?)";
@@ -34,17 +49,32 @@ public class DBAppUserDao implements IAppUserDAO {
         }
     }
 
-    // Method to hash the password
+    /**
+     * Hashes the provided password using BCrypt.
+     * @param plainTextPassword The plain text password to be hashed.
+     * @return The hashed password.
+     */
+
     private String hashPassword(String plainTextPassword) {
         return BCrypt.hashpw(plainTextPassword, SALT);
     }
 
-    // Method to verify password
+    /**
+     * Verifies whether the proved plain text password match the hashed password.
+     * @param plainTextPassword The plain text password.
+     * @param hashedPassword The hashed password.
+     * @return True if the passwords match, false otherwise.
+     */
+
     public boolean verifyPassword(String plainTextPassword, String hashedPassword) {
         return BCrypt.checkpw(plainTextPassword, hashedPassword);
     }
 
-    // Method to update user entry in database
+    /**
+     * Updates the user entry in the database.
+     * @param appUser The AppUser object with updated information.
+     */
+
     @Override
     public void updateUser(AppUser appUser) {
         StringBuilder queryBuilder = new StringBuilder("UPDATE User SET");
@@ -92,9 +122,15 @@ public class DBAppUserDao implements IAppUserDAO {
     @Override
     public void deleteUser(AppUser appUser) {
 
-    }    
+    }
 
-    // Method to retrieve current user
+    /**
+     * Retrieves the user with the specified ID from the database.
+     *
+     * @param userId The ID of the user to retrieve
+     * @return The AppUser object representing the retrieved user.Return null if user is not found.
+     */
+
     public AppUser getUser(int userId) {
         String query = "SELECT * FROM User WHERE UserID = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
@@ -115,7 +151,14 @@ public class DBAppUserDao implements IAppUserDAO {
         return null;
     }
 
-    // Method to retrieve user by email from database
+    /**
+     * Retrieves the user with the specified email from the database.
+     *
+     * @param email The email of the user to retrieve.
+     * @return The AppUser object representing the retrieved user. Return null if user is not found.
+     */
+
+
     public AppUser getUserByEmail(String email) {
         String query = "SELECT * FROM User WHERE Email = ?";
         try (PreparedStatement statement = connection.prepareStatement(query)) {

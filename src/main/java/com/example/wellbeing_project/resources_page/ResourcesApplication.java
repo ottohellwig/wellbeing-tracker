@@ -10,7 +10,18 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 // Constructor method
+
+/**
+ * Application class for managing the resources page for the application
+ */
 public class ResourcesApplication extends Application {
+
+    /**
+     * Starts the resources application by setting up the primary stage with the resources view.
+     *
+     * @param stage primary stage for this method.
+     * @throws IOException if the FXML file cannot be loaded.
+     */
     @Override
     public void start(Stage stage) throws IOException {
         // Get fxml document
@@ -31,6 +42,10 @@ public class ResourcesApplication extends Application {
         stage.show();
     }
 
+    /**
+     * Main method used to launch the application.
+     * @param args command line arguments.
+     */
     public static void main(String[] args) {
         launch();
     }

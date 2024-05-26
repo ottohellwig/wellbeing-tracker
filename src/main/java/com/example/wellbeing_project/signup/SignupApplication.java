@@ -10,11 +10,20 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 // Constructor method
+
+/**
+ * Application class to manage the sign-up view.
+ */
 public class SignupApplication extends Application {
     // Variables for height and width of some pages
     public static final double WIDTH = 400;
     public static final double HEIGHT = 500;
-    
+
+    /**
+     * Starts the sign-up application by setting up the primary stage with the sign-up view.
+     * @param stage the primary stage for the sign-up application.
+     * @throws IOException if the FXML file cannot be loaded.
+     */
     @Override
     public void start(Stage stage) throws IOException {
         // Retrieve fxml document
@@ -36,6 +45,12 @@ public class SignupApplication extends Application {
     }
 
     // Method to open login page
+
+    /**
+     * Opens the login page by creating a new instance of LoginApplication and starting it.
+     * Closes the current stage.
+     * @param stage current stage to be closed.
+     */
     public void openLogin(Stage stage) {
         LoginApplication login = new LoginApplication();
         try {
@@ -46,6 +61,10 @@ public class SignupApplication extends Application {
         }
     }
 
+    /**
+     * Main method used to launch the signup application.
+     * @param args command line arguments.
+     */
     public static void main(String[] args) {
         launch();
     }

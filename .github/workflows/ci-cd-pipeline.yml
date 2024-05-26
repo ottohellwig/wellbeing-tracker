@@ -40,6 +40,20 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
-    # Step 5: Run tests with Maven
+
+      # Step 5: Run tests with Maven
     - name: Run tests
       run: mvn test
+
+      # Step 6: Create Javadocs
+    - name : Generate Javadoc
+      run: mvn javadoc:javadoc
+
+      #Step 7: Publish Javadoc
+    - name: Publish Javadoc
+      uses: JamesIves/github-pages-deploy-action@v2
+      with:
+        folder: target/docs/javadoc
+
+
+

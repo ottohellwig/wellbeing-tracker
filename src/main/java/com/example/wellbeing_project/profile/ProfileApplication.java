@@ -9,7 +9,15 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Class for managing the profile view for the application.
+ */
 public class ProfileApplication extends Application {
+    /**
+     * Starts the application by setting up the primary stage with the profile view.
+     * @param stage the primary stage for this class.
+     * @throws IOException if the FXML file cannot be loaded.
+     */
     @Override
     public void start(Stage stage) throws IOException {
         // Retrieve fxml document
@@ -29,6 +37,11 @@ public class ProfileApplication extends Application {
         stage.setScene(scene);
         stage.show();
     }
+
+    /**
+     * Method used to launch the application.
+     * @param args is the command line arguments.
+     */
     public static void main(String[] args) {
         launch();
     }

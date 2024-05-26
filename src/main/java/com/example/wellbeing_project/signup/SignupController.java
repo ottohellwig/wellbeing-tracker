@@ -12,6 +12,10 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 // Constructor method
+
+/**
+ * Controller class for managing the sign-up view.
+ */
 public class SignupController {
 
     @FXML
@@ -23,7 +27,13 @@ public class SignupController {
     @FXML
     private PasswordField passwordField;
 
-    // Method to manage signup
+
+
+    /**
+     * Manges the sign-up process.
+     * Retries the data from the form fields, validates the input and creates a new user, and adds the user to the database.
+     * Displays appropriate messages based on success or failure of creating the new user.
+     */
     @FXML
     void manageSignup() {
         // Get data from the form fields
@@ -56,6 +66,11 @@ public class SignupController {
     private Button loginButton;
 
     // Method to launch login page from login button
+
+    /**
+     * Launches the login page when the login button is clicked
+     * Retrieves the current stage and calls the openlogin method from the SignupApplication class.
+     */
     @FXML
     private void startLogin() {
         // Get the stage from the button

@@ -9,7 +9,16 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Method for managing the logout functionality of the application.
+ */
 public class LogoutApplication extends Application {
+
+    /**
+     * Starts the logout method by setting up the primaary stage with the logout view.
+     * @param stage primary stage for this method.
+     * @throws IOException if the FXML file cannot be loaded.
+     */
     @Override
     public void start(Stage stage) throws IOException {
         // Retrieve fmxl document
@@ -30,7 +39,11 @@ public class LogoutApplication extends Application {
         stage.show();
     }
 
-    // Method that closes current stage and opens the login stage
+    /**
+     * Closes current stage and opens the login stage
+     * @param stage the current stage to be closed
+     */
+
     public void openLogin(Stage stage) {
         LoginApplication login = new LoginApplication();
         try {
@@ -41,6 +54,10 @@ public class LogoutApplication extends Application {
         }
     }
 
+    /**
+     * The main method used to launch the application
+     * @param args command line arguments.
+     */
     public static void main(String[] args) {
         launch();
     }

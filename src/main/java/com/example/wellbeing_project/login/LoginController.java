@@ -14,6 +14,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Class for managing the login function for the application using users email and password
+ */
 public class LoginController {
 
     @FXML
@@ -37,6 +40,11 @@ public class LoginController {
     }
 
     // Method to handle signin
+
+    /**
+     * Handles the sign-in process by verifying the user credentials inputted against the database. Also manages the "Remember Me" method.
+     * If sign-in is successful the application moves to the home page.
+     */
     @FXML
     void signin() {
         // Get email and password entered by the user
@@ -71,6 +79,12 @@ public class LoginController {
         }
     }
 
+    /**
+     * Opens the home page after the login is successful.
+     *
+     * @throws IOException if there is an error while opening the home page.
+     */
+
     // Method to open the home page
     private void openHome() throws IOException {
         HomeApplication homeApplication = new HomeApplication();
@@ -80,6 +94,10 @@ public class LoginController {
     
     @FXML
     private Button signupButton;
+
+    /**
+     * Method that launches the sign-up page if the sign-up button is clicked.
+     */
 
     // Method that launches sign up page from sign up button
     @FXML

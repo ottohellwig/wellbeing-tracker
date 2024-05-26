@@ -11,6 +11,9 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.prefs.Preferences;
 
+/**
+ * Creates the integrative GUI for users to login.
+ */
 // Constructor method
 public class LoginApplication extends Application {
     @Override
@@ -52,7 +55,11 @@ public class LoginApplication extends Application {
         super.stop();
     }
 
-    // Method to close stage and open signup stage
+    /**
+     * Method to close the current stage and open the Home Application stage.
+     * @param stage The stage to be closed
+     */
+
     public void openHomeApplication(Stage stage) {
         HomeApplication signup = new HomeApplication();
         try {
@@ -63,6 +70,10 @@ public class LoginApplication extends Application {
         }
     }
 
+    /**
+     * The main method used to launch the application
+     * @param args command line arguments.
+     */
     public static void main(String[] args) {
         launch();
     }

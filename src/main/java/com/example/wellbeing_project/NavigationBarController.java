@@ -11,6 +11,9 @@ import com.example.wellbeing_project.profile.*;
 
 import java.io.IOException;
 
+/**
+ * Controller class for the navigation bar.
+ */
 public class NavigationBarController
 {
     @FXML
@@ -23,6 +26,8 @@ public class NavigationBarController
     private Button logoutButton;
     @FXML
     private Button profileButton;
+
+
 
     @FXML
     protected void onHomeButtonClick() throws IOException {

@@ -13,6 +13,9 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+/**
+ * Controller class for managing the profile for the application
+ */
 public class ProfileController {
 
     @FXML
@@ -26,7 +29,12 @@ public class ProfileController {
     @FXML
     private Button backBtn;
 
-    // Method to handle saving changes
+    /**
+     * Handles saving changes to the user's profile information.
+     * Retrieves the current values from the text fields and updates in the database.
+     * Then displays a confirmation message.
+     */
+
     @FXML
     void saveChanges() {
         String name = nameField.getText().trim();
@@ -59,6 +67,11 @@ public class ProfileController {
         alert.showAndWait();
     }
 
+    /**
+     * Initializes the profile view with the current user's information
+     * Retrieves details from the database for the current logged-in user and populates the text fields with the current user's information.
+     */
+
     public void initialize() {
         // Get the logged in user's ID from AppSession
         int userId = AppSession.getLoggedInUserId();
@@ -74,7 +87,14 @@ public class ProfileController {
         emailField.setText(user.getEmail());
     }
 
-    // Handle the action when "Back" button is clicked
+
+
+    /**
+     * Handles the action when "Back" button is clicked
+     * Closes the current profile view and opens the home view
+     *
+     * @throws IOException if the home view FXML cannot be loaded.
+     */
     @FXML
     private void goBack() throws IOException {
         Stage stage = (Stage) backBtn.getScene().getWindow();

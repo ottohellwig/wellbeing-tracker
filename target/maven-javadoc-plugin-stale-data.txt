@@ -1,0 +1,54 @@
+@options
+@packages
+@argfile
+--class-path
+'C:/Users/Kodee/.m2/repository/org/openjfx/javafx-controls/17.0.6/javafx-controls-17.0.6.jar;C:/Users/Kodee/.m2/repository/org/openjfx/javafx-graphics/17.0.6/javafx-graphics-17.0.6.jar;C:/Users/Kodee/.m2/repository/org/openjfx/javafx-base/17.0.6/javafx-base-17.0.6.jar;C:/Users/Kodee/.m2/repository/org/openjfx/javafx-fxml/17.0.6/javafx-fxml-17.0.6.jar'
+--module-path
+'C:/Users/Kodee/.m2/repository/net/java/dev/jna/jna-platform/5.14.0/jna-platform-5.14.0.jar;C:/Users/Kodee/.m2/repository/org/openjfx/javafx-graphics/17.0.6/javafx-graphics-17.0.6-win.jar;C:/Users/Kodee/.m2/repository/org/openjfx/javafx-base/17.0.6/javafx-base-17.0.6-win.jar;C:/Users/Kodee/.m2/repository/net/java/dev/jna/jna/5.14.0/jna-5.14.0.jar;C:/Users/Kodee/.m2/repository/org/mindrot/jbcrypt/0.4/jbcrypt-0.4.jar;C:/Users/Kodee/.m2/repository/org/kordamp/bootstrapfx/bootstrapfx-core/0.4.0/bootstrapfx-core-0.4.0.jar;C:/Users/Kodee/IdeaProjects/cab302-wellbeing-project-2/target/classes;C:/Users/Kodee/.m2/repository/org/openjfx/javafx-controls/17.0.6/javafx-controls-17.0.6-win.jar;C:/Users/Kodee/.m2/repository/org/openjfx/javafx-fxml/17.0.6/javafx-fxml-17.0.6-win.jar'
+--patch-module
+com.example.wellbeing_project='C:/Users/Kodee/IdeaProjects/cab302-wellbeing-project-2/src/main/java'
+-encoding
+'UTF-8'
+-protected
+--module-source-path
+'C:/Users/Kodee/IdeaProjects/cab302-wellbeing-project-2/target/docs/javadoc/src'
+-author
+-bottom
+'Copyright &#169; 2024. All rights reserved.'
+-charset
+'UTF-8'
+-d
+'C:/Users/Kodee/IdeaProjects/cab302-wellbeing-project-2/target/docs/javadoc'
+-docencoding
+'UTF-8'
+-doctitle
+'Wellbeing_Project 1.0-SNAPSHOT API'
+-use
+-version
+-windowtitle
+'Wellbeing_Project 1.0-SNAPSHOT API'
+com.example.wellbeing_project
+com.example.wellbeing_project.login
+com.example.wellbeing_project.logout
+com.example.wellbeing_project.profile
+com.example.wellbeing_project.resources_page
+com.example.wellbeing_project.signup
+com.example.wellbeing_project.universal
+'C:/Users/Kodee/IdeaProjects/cab302-wellbeing-project-2/src/main/java/module-info.java'
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\allclasses-index.html = 1716697496738
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\allpackages-index.html = 1716697496742
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\constant-values.html = 1716697496606
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\element-list = 1716697496513
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\help-doc.html = 1716697496784
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\index-all.html = 1716697496775
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\index.html = 1716697496779
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\jquery-ui.overrides.css = 1716697496810
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\member-search-index.js = 1716697496751
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\module-search-index.js = 1716697496744
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\overview-tree.html = 1716697496718
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\package-search-index.js = 1716697496746
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\script.js = 1716697496790
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\search.js = 1716697496796
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\stylesheet.css = 1716697496787
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\tag-search-index.js = 1716697496753
+C:\Users\Kodee\IdeaProjects\cab302-wellbeing-project-2\target\docs\javadoc\type-search-index.js = 1716697496748
