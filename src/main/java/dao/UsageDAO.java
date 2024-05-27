@@ -16,12 +16,12 @@ public class UsageDAO {
     }
     // Add app data that user is using to database
     public void addUsage(String appName, Timestamp startTime, Timestamp endTime) {
-        String query = "INSERT INTO Usage (UserId, AppName, StartTime, EndTime) VALUES (?, ?, ?, ?)";
+        String query = "INSERT INTO Usage (UserId, StartTime, EndTime, Application) VALUES (?, ?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, AppUser.getUserId());
-            statement.setString(2, appName);
-            statement.setTimestamp(3, startTime);
-            statement.setTimestamp(4, endTime);
+            statement.setTimestamp(2, startTime);
+            statement.setTimestamp(3, endTime);
+            statement.setString(4, appName);
             statement.executeUpdate();
             connection.commit(); // Commit transaction
         } catch (SQLException e) {
