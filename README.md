@@ -1,6 +1,6 @@
   # Wellbeing Project
 
-  Wellbeing Project that tracks activity time/usage, designed for CAB302 - Software Development unit.
+  Wellbeing Project application that provides a timer, focus tasklist and tracks activity time/usage.
 
 ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)&nbsp;
 ![JavaFX](https://img.shields.io/badge/javafx-%23FF0000.svg?style=for-the-badge&logo=javafx&logoColor=white)&nbsp;
@@ -13,7 +13,7 @@
 
 ## Description
 
-Wellbeing Project is a group project (Team Pepe) that is designed to support the wellbeing of users by timing activities, providing activity reports and resources to foster a strong mental and emotional wellbeing. 
+Wellbeing Project is designed to support the wellbeing of users by timing activities, providing activity reports and resources to foster a strong mental and emotional wellbeing. 
 
 ## Features
 
@@ -51,7 +51,3 @@ Wellbeing Project is a group project (Team Pepe) that is designed to support the
    ```sh
    run using JDK17
    ```
-
-## Credits
-
-Credits to Team Pepe: Trent Ireland, Otto Hellwig, Shem Lee, Kodee Cummins and Anger Pac.
