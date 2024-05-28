@@ -7,7 +7,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 
-<VBox alignment="TOP_LEFT" spacing="20.0"
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<VBox spacing="20.0"
       xmlns:fx="http://javafx.com/fxml"
       fx:controller="com.example.wellbeing_project.ReportsController">
     <padding>
@@ -15,4 +18,26 @@
     </padding>
     <fx:include source="navigationBar-view.fxml"/>
     <Label text="Activity Reports" />
+    <HBox spacing="10.0">
+        <Button fx:id="weeklyReportButton" text="Weekly" onAction="#showWeeklyReport"/>
+        <Button fx:id="dailyReportButton" text="Daily" onAction="#showDailyReport"/>
+    </HBox>
+    <VBox spacing="1.0">
+        <Label fx:id="averageLabel" />
+    </VBox>
+    <BarChart fx:id="barChart" prefWidth="600" prefHeight="400">
+        <xAxis>
+            <CategoryAxis fx:id="xAxis" />
+        </xAxis>
+        <yAxis>
+            <NumberAxis fx:id="yAxis" label="Hours"/>
+        </yAxis>
+    </BarChart>
+    <Hyperlink fx:id="detailedActivityLink" text="See detailed activity" onAction="#showDetailedActivityClick"/>
+    <TableView fx:id="detailedActivityTable" visible="false">
+        <columns>
+            <TableColumn fx:id="applicationColumn" text="Application" />
+            <TableColumn fx:id="timeSpentColumn" text="Time Spent" />
+        </columns>
+    </TableView>
 </VBox>
