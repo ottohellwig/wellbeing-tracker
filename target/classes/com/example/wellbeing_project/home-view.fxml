@@ -19,6 +19,12 @@
     <TextField fx:id="minutesField" promptText="Minutes"/>
     <TextField fx:id="secondsField" promptText="Seconds"/>
     <CheckBox alignment="TOP_LEFT" fx:id="fifteenMinuteIntervalCheckbox" text="15 Minute Interval" />
+    <HBox alignment="CENTER_RIGHT">
+        <padding>
+            <Insets left="20.0"/>
+        </padding>
+        <TextField alignment="CENTER_RIGHT" fx:id="TimerName" promptText="Timer Name" />
+    </HBox>
     <HBox spacing="10">
         <Button text="Start Timer" onAction="#startTimer" />
         <Button text="Pause/Resume" onAction="#pauseTimer" />

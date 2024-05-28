@@ -135,6 +135,7 @@ public class DBAppUserDao implements IAppUserDAO {
         }
         return null;
     }
+
     // Method from interface, not used
     @Override
     public List<AppUser> getAllUsers() {

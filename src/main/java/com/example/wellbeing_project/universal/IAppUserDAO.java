@@ -12,6 +12,7 @@ public interface IAppUserDAO {
     public void deleteUser(AppUser appUser);
     // Get user
     public AppUser getUser(int userId);
+
     // List all users
     public List<AppUser> getAllUsers();
 }

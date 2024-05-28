@@ -15,6 +15,10 @@ import com.sun.jna.Native;
 import com.sun.jna.platform.win32.WinDef.HWND;
 import com.sun.jna.platform.win32.WinUser;
 import java.util.concurrent.atomic.AtomicBoolean;
+import dao.TimerDAO;
+import java.sql.Timestamp;
+import com.example.wellbeing_project.universal.AppUser;
+import dao.UsageDAO;
 public class HomeController {
 
     private AtomicBoolean stopTracking = new AtomicBoolean(false);
@@ -25,6 +29,8 @@ public class HomeController {
 
     @FXML
     public TextField hoursField, minutesField, secondsField;
+    @FXML
+    public TextField TimerName;
 
     @FXML
     public void startTimer() {
@@ -65,6 +71,27 @@ public class HomeController {
 
         stopTracking.set(false);
         new Thread(this::trackActiveWindow).start();
+
+        // Create Timer name variable and default option
+        String timerNameText = TimerName.getText();
+        if (timerNameText == null || timerNameText.trim().isEmpty()) {
+            // Set default value
+            timerNameText = "Random Timer";
+        }
+        AppUser.setTimerName(timerNameText);
+        AppUser.setDurationMinutes((hours * 60) + minutes + (seconds / 60));
+        Timestamp startTime = new Timestamp(System.currentTimeMillis());
+        AppUser.setStartTime(startTime);
+
+        // Calculate and set end time
+        int durationInSeconds = (hours * 3600) + (minutes * 60) + seconds;
+        long endTimeInMillis = System.currentTimeMillis() + (durationInSeconds * 1000);
+        Timestamp endTime = new Timestamp(endTimeInMillis);
+        AppUser.setEndTime(endTime);
+
+        // Save timer to database
+        TimerDAO timerDAO = new TimerDAO();
+        timerDAO.addTimer();
     }
 
     @FXML
@@ -85,7 +112,10 @@ public class HomeController {
     private Timeline fifteenMinuteTimeline;
 
     public void initialize() {
-        fifteenMinuteTimeline = new Timeline(new KeyFrame(Duration.minutes(15), event -> showPopup()));
+        fifteenMinuteTimeline = new Timeline(new KeyFrame(Duration.minutes(15), event -> {
+            System.out.println("15 minutes passed."); // Debugging line
+            showPopup();
+        }));
         fifteenMinuteTimeline.setCycleCount(Timeline.INDEFINITE);
 
         fifteenMinuteIntervalCheckbox.selectedProperty().addListener((observable, oldValue, newValue) -> {
@@ -98,17 +128,19 @@ public class HomeController {
     }
 
     private void showPopup() {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setTitle("Information");
-        alert.setHeaderText(null);
-        alert.setContentText("15 minutes have passed!");
-
-        alert.showAndWait();
+        Platform.runLater(() -> {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Information");
+            alert.setHeaderText(null);
+            alert.setContentText("15 minutes have passed!");
+            alert.show();
+        });
     }
 
     private void trackActiveWindow() {
         String previousWindowTitle = "";
         long startTime = System.currentTimeMillis();
+        UsageDAO usageDAO = new UsageDAO();
 
         while (!stopTracking.get()) {
             String activeWindowTitle = getActiveWindowTitle();
@@ -118,6 +150,13 @@ public class HomeController {
                 long duration = endTime - startTime;
 
                 System.out.println("Window: " + previousWindowTitle + ", Duration: " + duration + " ms");
+
+                // Add previous app used to database
+                if (!previousWindowTitle.isEmpty()) {
+                    Timestamp startTimestamp = new Timestamp(startTime);
+                    Timestamp endTimestamp = new Timestamp(endTime);
+                    usageDAO.addUsage(previousWindowTitle, startTimestamp, endTimestamp);
+                }
 
                 previousWindowTitle = activeWindowTitle;
                 startTime = System.currentTimeMillis();
@@ -132,7 +171,7 @@ public class HomeController {
     }
 
     public String getActiveWindowTitle() {
-        byte[] windowText = new byte[512]; // Increase this if needed
+        byte[] windowText = new byte[512];
         HWND hWnd = User32.INSTANCE.GetForegroundWindow();
         User32.INSTANCE.GetWindowTextA(hWnd, windowText, 512);
         return Native.toString(windowText);

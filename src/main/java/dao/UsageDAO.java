@@ -4,23 +4,24 @@ import java.sql.Connection;
 
 import com.example.wellbeing_project.universal.AppUser;
 import com.example.wellbeing_project.universal.DBConnection;
+
 import java.sql.*;
 
-public class TimerDAO {
+public class UsageDAO {
     // Create database connection
     private Connection connection;
-    public TimerDAO() {
+    public UsageDAO() {
         // Get the connection instance from DBConnection
         connection = DBConnection.getInstance();
     }
-    public void addTimer() {
-        String query = "INSERT INTO Timers (UserId, TimerName, DurationInMinutes, StartTime, EndTime) VALUES (?, ?, ?, ?, ?)";
+    // Add app data that user is using to database
+    public void addUsage(String appName, Timestamp startTime, Timestamp endTime) {
+        String query = "INSERT INTO Usage (UserId, StartTime, EndTime, Application) VALUES (?, ?, ?, ?)";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, AppUser.getUserId());
-            statement.setString(2, AppUser.getTimerName());
-            statement.setInt(3, AppUser.getDurationMinutes());
-            statement.setTimestamp(4, AppUser.getStartTime());
-            statement.setTimestamp(5, AppUser.getEndTime());
+            statement.setTimestamp(2, startTime);
+            statement.setTimestamp(3, endTime);
+            statement.setString(4, appName);
             statement.executeUpdate();
             connection.commit(); // Commit transaction
         } catch (SQLException e) {
