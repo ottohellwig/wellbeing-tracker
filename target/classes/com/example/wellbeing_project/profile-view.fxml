@@ -19,7 +19,6 @@
         <padding>
             <Insets left="10" top="20.0"/>
         </padding>
-        <Label fx:id="subtitle" text=""/>
     </VBox>
     <VBox alignment="CENTER_LEFT" spacing="10.0">
         <padding>
