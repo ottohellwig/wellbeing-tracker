@@ -1,7 +1,6 @@
 package com.example.wellbeing_project.login;
 
 import com.example.wellbeing_project.signup.SignupApplication;
-import com.example.wellbeing_project.HomeApplication;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -33,34 +32,23 @@ public class LoginApplication extends Application {
         stage.show();
     }
     // Variable for setting the remember me function in the login page
-    private static final Preferences prefs = Preferences.userNodeForPackage(LoginApplication.class);
+    private static final Preferences preferences = Preferences.userNodeForPackage(LoginApplication.class);
 
-    // Method to close stage and open signup stage
+    // Method to open signup
     public void openSignup(Stage stage) {
         SignupApplication signup = new SignupApplication();
         try {
             signup.start(new Stage());
             stage.close();
         } catch (Exception e) {
-            e.printStackTrace(); // See errors
+            e.printStackTrace();
         }
     }
-    // Save preferences of user on application close
+    // Save preferences when closing application
     @Override
     public void stop() throws Exception {
-        prefs.flush();
+        preferences.flush();
         super.stop();
-    }
-
-    // Method to close stage and open signup stage
-    public void openHomeApplication(Stage stage) {
-        HomeApplication signup = new HomeApplication();
-        try {
-            signup.start(new Stage());
-            stage.close();
-        } catch (Exception e) {
-            e.printStackTrace(); // See errors
-        }
     }
 
     public static void main(String[] args) {

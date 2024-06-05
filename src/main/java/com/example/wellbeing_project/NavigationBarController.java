@@ -1,5 +1,6 @@
 package com.example.wellbeing_project;
 
+import com.example.wellbeing_project.signup.SignupApplication;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -21,6 +22,8 @@ public class NavigationBarController
     private Button focusPeriodButton;
     @FXML
     private Button logoutButton;
+    @FXML
+    private Button profileButton;
 
     @FXML
     protected void onHomeButtonClick() throws IOException {
@@ -66,6 +69,19 @@ public class NavigationBarController
         FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("focus-period-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HomeApplication.WIDTH, HomeApplication.HEIGHT);
         // Load CSS stylesheet
+        String stylesheet = LoginApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
+
+        // Apply stylesheet to scene
+        scene.getStylesheets().add(stylesheet);
+        stage.setScene(scene);
+    }
+
+    @FXML
+    protected void onProfileButtonClick() throws IOException {
+        Stage stage = (Stage) profileButton.getScene().getWindow();
+        FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("profile-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), SignupApplication.WIDTH, SignupApplication.HEIGHT );
+        // Load  CSS stylesheet
         String stylesheet = LoginApplication.class.getResource("/com/example/wellbeing_project/stylesheet2.css").toExternalForm();
 
         // Apply stylesheet to scene

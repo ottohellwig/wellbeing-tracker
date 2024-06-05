@@ -35,13 +35,13 @@
             <Insets top="10.0"/>
         </padding>
 
-        <Button fx:id="signinBtn" text="Sign In" onAction="#signin" maxWidth="Infinity"/>
+        <Button fx:id="signinBtn" text="Sign In" onAction="#signIn" maxWidth="Infinity"/>
     </VBox>
     <VBox alignment="CENTER_RIGHT" spacing="10.0">
         <padding>
             <Insets bottom="10.0"/>
         </padding>
 
-        <Button fx:id="signupButton" onAction="#startSignup" text="Sign Up"/>
+        <Button fx:id="signupButton" onAction="#openSignup" text="Sign Up"/>
     </VBox>
 </VBox>

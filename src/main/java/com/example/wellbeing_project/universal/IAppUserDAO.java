@@ -1,18 +1,16 @@
 package com.example.wellbeing_project.universal;
 
-import java.util.List;
 
 // Interface to use for database connection operations
 public interface IAppUserDAO {
     // Add user
-    public void addUser(AppUser appUser);
-    // Update User
-    public void updateUser(AppUser appUser);
-    // Delete user
-    public void deleteUser(AppUser appUser);
-    // Get user
-    public AppUser getUser(int userId);
+    void addUser(AppUser appUser);
 
-    // List all users
-    public List<AppUser> getAllUsers();
+    // Update User
+    void updateUser(AppUser appUser);
+
+    // Get user
+    AppUser getUser(int userId);
+
+
 }

@@ -3,23 +3,18 @@ package com.example.wellbeing_project.universal;
 import java.sql.Timestamp;
 
 public class AppUser {
-    // Variables linked to database, possibly not needed
+    // Variables linked to database
     private static int userId;
     private static String name;
     private static String email;
     private static String password;
-    private String reportDate;
+
     private static String timerName;
     private static int durationMinutes;
     private static Timestamp startTime;
     private static Timestamp endTime;
 
-    /** User Constructor
-     *
-     * @param name - user name
-     * @param email - user email
-     * @param password - user password
-     */
+
     public AppUser(String name, String email, String password) {
         this.name = name;
         this.email = email;
@@ -29,10 +24,7 @@ public class AppUser {
     public static int getUserId() {
         return userId;
     }
-    /** User ID setter
-     * 
-     * @param userId - unique user ID
-     */
+
     public void setUserId(int userId) {
         this.userId = userId;
     }
@@ -47,10 +39,6 @@ public class AppUser {
 
     public static String getEmail() {
         return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
     }
 
     public static String getPassword() {
