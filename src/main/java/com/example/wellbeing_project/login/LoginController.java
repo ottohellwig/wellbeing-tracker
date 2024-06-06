@@ -1,7 +1,5 @@
 package com.example.wellbeing_project.login;
 
-import com.example.wellbeing_project.signup.SignupApplication;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import com.example.wellbeing_project.universal.AppUser;
@@ -24,40 +22,45 @@ public class LoginController {
 
     @FXML
     private CheckBox rememberMeCheckbox;
-    // Create new user database access object, then create a variable for the user preferences
+
+    @FXML
+    private Button signupButton;
+
+    // Create new user dao
     private final DBAppUserDao userDao = new DBAppUserDao();
-    private static final Preferences prefs = Preferences.userNodeForPackage(LoginController.class);
+    // Create a variable for the user preferences
+    private static final Preferences preferences = Preferences.userNodeForPackage(LoginController.class);
 
     // Method to retrieve user preferences on launch of application
     @FXML
     public void initialize() {
-        // Load the saved user data
-        emailField.setText(prefs.get("email", ""));
-        rememberMeCheckbox.setSelected(prefs.getBoolean("remember", false));
+        // Load saved user data
+        emailField.setText(preferences.get("email", ""));
+        rememberMeCheckbox.setSelected(preferences.getBoolean("remember", false));
     }
 
-    // Method to handle signin
+    // Method for sign in
     @FXML
-    void signin() {
+    void signIn() {
         // Get email and password entered by the user
-        String email = emailField.getText().trim();
+        String email = emailField.getText();
         String password = passwordField.getText();
         // Retrieve user using email input
         AppUser user = userDao.getUserByEmail(email);
-        
-        if (user != null && userDao.verifyPassword(password, user.getPassword())) {
+
+        if (user != null && userDao.checkPassword(password, user.getPassword())) {
             // Login successful
             if (rememberMeCheckbox.isSelected()) {
                 // Save user data if remember me is checked
-                prefs.put("email", email);
-                prefs.putBoolean("remember", true);
+                preferences.put("email", email);
+                preferences.putBoolean("remember", true);
             } else {
                 // Clear user data if remember me is not checked
-                prefs.remove("email");
-                prefs.putBoolean("remember", false);
+                preferences.remove("email");
+                preferences.putBoolean("remember", false);
             }
             // Set the logged-in user's ID in the session
-            AppSession.setLoggedInUserId(user.getUserId());
+            AppSession.setLoggedInID(user.getUserId());
             // Continue login process
             try {
                 openHome();
@@ -76,18 +79,15 @@ public class LoginController {
         HomeApplication homeApplication = new HomeApplication();
         Stage stage = (Stage) emailField.getScene().getWindow();
         homeApplication.start(stage);
-    }    
-    
-    @FXML
-    private Button signupButton;
+    }
 
     // Method that launches sign up page from sign up button
     @FXML
-    private void startSignup() {
-        // Get stage
+    private void openSignup() {
+        // Get sign up stage
         Stage stage = (Stage) signupButton.getScene().getWindow();
 
-        // Call openSignup method from LoginApplication class
+        // Get openSignup method from LoginApplication class
         LoginApplication loginApp = new LoginApplication();
         loginApp.openSignup(stage);
     }

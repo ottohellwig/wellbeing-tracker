@@ -22,7 +22,7 @@ public class TimerDAO {
             statement.setTimestamp(4, AppUser.getStartTime());
             statement.setTimestamp(5, AppUser.getEndTime());
             statement.executeUpdate();
-            connection.commit(); // Commit transaction
+            connection.commit();
         } catch (SQLException e) {
             e.printStackTrace();
         }

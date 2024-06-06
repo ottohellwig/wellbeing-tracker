@@ -2,12 +2,8 @@ package com.example.wellbeing_project.signup;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import java.sql.Connection;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
 import com.example.wellbeing_project.universal.*;
 
-import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
@@ -23,12 +19,15 @@ public class SignupController {
     @FXML
     private PasswordField passwordField;
 
-    // Method to manage signup
     @FXML
-    void manageSignup() {
-        // Get data from the form fields
-        String name = nameField.getText().trim();
-        String email = emailField.getText().trim();
+    private Button loginButton;
+
+    // Method for signup
+    @FXML
+    void Signup() {
+        // Get data from fields
+        String name = nameField.getText();
+        String email = emailField.getText();
         String password = passwordField.getText();
 
         // Check if any field is empty
@@ -37,31 +36,33 @@ public class SignupController {
             return;
         }
 
-        // Create new AppUser object
+        // Create new AppUser
         AppUser newUser = new AppUser(name, email, password);
 
         // Add user to the database
         DBAppUserDao userDao = new DBAppUserDao();
         try {
             userDao.addUser(newUser);
-            // Show success message
-            System.out.println("User added successfully!");            
+            // Show sign up confirmation message
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success!");
+            alert.setHeaderText(null);
+            alert.setContentText("Successfully signed up!");
+            alert.showAndWait();
         } catch (Exception e) {
             e.printStackTrace();
+            // Show error alert
             ErrorAlert.displayError("Error", "Failed to add user to the database.");
         }
     }
 
-    @FXML
-    private Button loginButton;
-
     // Method to launch login page from login button
     @FXML
-    private void startLogin() {
-        // Get the stage from the button
+    private void openLogin() {
+        // Get the login stage
         Stage stage = (Stage) loginButton.getScene().getWindow();
 
-        // Call openLogin method from SignupApplication class
+        // Get openLogin method from SignupApplication class
         SignupApplication signupApp = new SignupApplication();
         signupApp.openLogin(stage);
     }

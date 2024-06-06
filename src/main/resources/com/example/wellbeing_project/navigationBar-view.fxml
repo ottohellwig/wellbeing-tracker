@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -13,5 +10,6 @@
         <Button fx:id="reportsButton" text="Reports" onAction="#onReportsButtonClick"/>
         <Button fx:id="resourcesButton" text="Resources" onAction="#onResourcesButtonClick"/>
         <Button fx:id="focusPeriodButton" text="Focus Period" onAction="#onFocusPeriodButtonClick"/>
+        <Button fx:id="profileButton" text="Profile" onAction="#onProfileButtonClick"/>
         <Button fx:id="logoutButton" text="Logout" onAction="#onLogoutButtonClick"/>
 </HBox>

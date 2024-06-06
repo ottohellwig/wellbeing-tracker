@@ -1,6 +1,5 @@
 package com.example.wellbeing_project.resources_page;
 
-import com.example.wellbeing_project.login.LoginApplication;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -35,3 +34,4 @@ public class ResourcesApplication extends Application {
         launch();
     }
 }
+

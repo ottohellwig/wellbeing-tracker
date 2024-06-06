@@ -13,13 +13,12 @@
         <padding>
             <Insets left="10.0"/>
         </padding>
-        <Button fx:id="backBtn" text="Back" onAction="#goBack"/>
+        <Button fx:id="backButton" text="Back" onAction="#goBack"/>
     </VBox>
     <VBox alignment="CENTER_LEFT" spacing="10.0">
         <padding>
             <Insets left="10" top="20.0"/>
         </padding>
-        <Label fx:id="subtitle" text=""/>
     </VBox>
     <VBox alignment="CENTER_LEFT" spacing="10.0">
         <padding>
@@ -39,6 +38,6 @@
         <padding>
             <Insets top="10.0"/>
         </padding>
-        <Button fx:id="changeBtn" text="Save Changes" maxWidth="Infinity" onAction="#saveChanges"/>
+        <Button fx:id="changeButton" text="Save Changes" maxWidth="Infinity" onAction="#saveChanges"/>
     </VBox>
 </VBox>

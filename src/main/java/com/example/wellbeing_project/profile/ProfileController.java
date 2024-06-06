@@ -27,84 +27,47 @@ public class ProfileController {
     private PasswordField passwordField;
 
     @FXML
-    private Button backBtn;
+    private Button backButton;
 
     @FXML
-    private Button changeBtn;
+    private Button changeButton;
 
     private DBAppUserDao user;
-    private AppUser existingUser;
+    private AppUser userExists;
+
+    // Method to hash password
+    private String hashPassword(String originalPassword) {
+        return BCrypt.hashpw(originalPassword, BCrypt.gensalt());
+    }
 
     public ProfileController() {
         this.user = new DBAppUserDao();
     }
 
     public void initialize() {
-        // Get the logged-in user's ID from AppSession
-        int userId = AppSession.getLoggedInUserId();
-        System.out.println("Logged-in user ID: " + userId);
+        // Get the logged in user's ID from AppSession class
+        int userId = AppSession.getLoggedInID();
 
         // Retrieve user information from the database
-        existingUser = user.getUser(userId);
-        System.out.println("Retrieved user: " + existingUser); // Debugging
+        userExists = user.getUser(userId);
 
-        // Insert current user information
-        nameField.setText(existingUser.getName());
-        emailField.setText(existingUser.getEmail());
+        // Insert logged in user information
+        nameField.setText(userExists.getName());
+        emailField.setText(userExists.getEmail());
 
-        // Initially disable save changes button
-        changeBtn.setDisable(true);
+        // Set save changes button to disabled before password entered
+        changeButton.setDisable(true);
 
-        // Add listener to passwordField to enable button if password field is not null
+        // Add listener to passwordField to enable save changes button if password field isn't empty
         passwordField.textProperty().addListener((observable, oldValue, newValue) -> {
-            changeBtn.setDisable(newValue.isEmpty());
+            changeButton.setDisable(newValue.isEmpty());
         });
     }
 
-    // Method to handle saving changes
-    @FXML
-    void saveChanges() {
-        String name = nameField.getText().trim();
-        String email = emailField.getText().trim();
-        String password = passwordField.getText().trim();
-
-        // Verify password
-        boolean correctPassword = BCrypt.checkpw(password, existingUser.getPassword());
-
-        if (correctPassword) {
-            // Create updated AppUser object, ignoring empty fields
-            AppUser updatedUser = new AppUser(
-                    name.isEmpty() ? existingUser.getName() : name,
-                    email.isEmpty() ? existingUser.getEmail() : email,
-                    hashPassword(password) // Hash password
-            );
-            updatedUser.setUserId(existingUser.getUserId());
-
-            // Update user details in the database
-            user.updateUser(updatedUser);
-
-            // Show confirmation message
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setTitle("Success!");
-            alert.setHeaderText(null);
-            alert.setContentText("Profile updated successfully.");
-            alert.showAndWait();
-        } else {
-            ErrorAlert.displayError("Error!", "Incorrect password. Please try again.");
-        }
-
-
-    }
-
-    // Method to hash password
-    private String hashPassword(String plainTextPassword) {
-        return BCrypt.hashpw(plainTextPassword, BCrypt.gensalt());
-    }
-
-    // Handle the action when "Back" button is clicked
+    // Go back to home page when back button is clicked
     @FXML
     private void goBack() throws IOException {
-        Stage stage = (Stage) backBtn.getScene().getWindow();
+        Stage stage = (Stage) backButton.getScene().getWindow();
         FXMLLoader fxmlLoader = new FXMLLoader(HomeApplication.class.getResource("home-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), HomeApplication.WIDTH, HomeApplication.HEIGHT);
         // Load CSS stylesheet
@@ -114,4 +77,42 @@ public class ProfileController {
         scene.getStylesheets().add(stylesheet);
         stage.setScene(scene);
     }
+
+    // Method to save changes
+    @FXML
+    void saveChanges() {
+        String name = nameField.getText();
+        String email = emailField.getText();
+        String password = passwordField.getText();
+
+        // Check password
+        boolean correctPassword = BCrypt.checkpw(password, userExists.getPassword());
+
+        if (correctPassword) {
+            // Create updated AppUser
+            AppUser updatedUserProfile = new AppUser(
+                    name.isEmpty() ? userExists.getName() : name,
+                    email.isEmpty() ? userExists.getEmail() : email,
+                    hashPassword(password)
+            );
+            updatedUserProfile.setUserId(userExists.getUserId());
+
+            // Update user details in the database
+            user.updateUser(updatedUserProfile);
+
+            // Show confirmation message
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setTitle("Success!");
+            alert.setHeaderText(null);
+            alert.setContentText("Profile updated successfully.");
+            alert.showAndWait();
+        } else {
+            // Show error
+            ErrorAlert.displayError("Error!", "Incorrect password. Please try again.");
+        }
+
+
+    }
+
+
 }
