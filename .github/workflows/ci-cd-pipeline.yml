@@ -49,12 +49,8 @@ jobs:
     - name : Generate Javadoc
       run: mvn javadoc:javadoc
 
-      #Step 7: Publish Javadoc
-    - name: Publish Javadoc
-      uses: JamesIves/github-pages-deploy-action@v4
-      with:
-        github_token: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
-        folder: target/docs/javadoc
+
+
 
 
 
