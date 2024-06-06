@@ -77,14 +77,20 @@ public class ReportDAO {
         ObservableList<ReportsController.Activity> data = FXCollections.observableArrayList();
         String query = "SELECT " +
                 "Application, " +
-                "SUM((EndTime / 1000 - StartTime / 1000) / 3600) || ' hours ' || SUM(((EndTime / 1000 - StartTime / 1000) % 3600) / 60) || ' minutes' AS TimeSpent " +
+                "printf('%d hours %d minutes %d seconds', " +
+                "total_seconds / 3600, " +
+                "(total_seconds % 3600) / 60, " +
+                "total_seconds % 60) AS TimeSpent " +
+                "FROM " +
+                "(SELECT Application, " +
+                "SUM((EndTime / 1000) - (StartTime / 1000)) AS total_seconds " +
                 "FROM " +
                 "Usage " +
                 "WHERE " +
                 "UserId = ? " +
                 "AND DATE(StartTime / 1000, 'unixepoch')  = DATE('now') " +
                 "GROUP BY " +
-                "Application";
+                "Application)";
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, AppUser.getUserId());
             ResultSet resultSet = statement.executeQuery();
@@ -139,14 +145,20 @@ public class ReportDAO {
         ObservableList<ReportsController.Activity> data = FXCollections.observableArrayList();
         String query = "SELECT " +
                 "Application, " +
-                "SUM((EndTime / 1000 - StartTime / 1000) / 3600) || ' hours ' || SUM(((EndTime / 1000 - StartTime / 1000) % 3600) / 60) || ' minutes' AS TimeSpent " +
+                "printf('%d hours %d minutes %d seconds', " +
+                "total_seconds / 3600, " +
+                "(total_seconds % 3600) / 60, " +
+                "total_seconds % 60) AS TimeSpent " +
+                "FROM " +
+                "(SELECT Application, " +
+                "SUM((EndTime / 1000) - (StartTime / 1000)) AS total_seconds " +
                 "FROM " +
                 "Usage " +
                 "WHERE " +
                 "UserId = ? " +
                 "AND DATE(StartTime / 1000, 'unixepoch')  BETWEEN DATE('now', '-7 days') AND DATE('now')  " +
                 "GROUP BY " +
-                "Application";
+                "Application)";
 
         try (PreparedStatement statement = connection.prepareStatement(query)) {
             statement.setInt(1, AppUser.getUserId());
