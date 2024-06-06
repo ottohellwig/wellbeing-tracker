@@ -1,3 +1,1028 @@
+commit 3846cf47dff393f8f9d268916674f98c74dfbfc6
+Merge: c87aa3f 3e24bc9
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Thu Jun 6 20:32:00 2024 +1000
+
+    Create README.md (#56)
+    
+    Readd the readme.md
+
+commit c87aa3fc0c1ea8931d144e1fdded37f6fc6a9c0d
+Merge: d35b63f 3dd9ccc
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Thu Jun 6 20:31:48 2024 +1000
+
+    added seconds to detailed report (#54)
+    
+    Added seconds to detailed report so data is shown even when recording
+    for a short time
+
+commit 3e24bc9dde34db40f0161518ffcfdf3751f17fd1
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Thu Jun 6 20:30:52 2024 +1000
+
+    Create README.md
+    
+    Readd the readme.md
+
+commit d35b63fbe2280a067fa36cbd8c23c9e366b72cc4
+Merge: 6f6baa9 3622d20
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Thu Jun 6 20:26:20 2024 +1000
+
+    Add JavaDocs + GitHub Pages deployment (#53)
+    
+    Add JD + GH pages deployment branch merge to main
+
+commit 3dd9ccc13236312b7349c60f06c65078aaf22b84
+Author: angerpac <anger.pac@connect.qut.edu.au>
+Date:   Thu Jun 6 20:11:47 2024 +1000
+
+    added seconds to detailed report
+
+commit 3622d20dc83194cd15f1424707d3d0e836a0389e
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Thu Jun 6 20:07:04 2024 +1000
+
+    Delete README.MD
+
+commit 61f71bb8c89319cb520cfaca62c19f5eaf6d5456
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Thu Jun 6 20:05:14 2024 +1000
+
+    JavaDocs GitHub pages upload
+
+commit 1deddd1e97cc1a32bf8c0b1114857a543cc145bf
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Thu Jun 6 20:01:56 2024 +1000
+
+    JavaDocs ./docs GH upload
+
+commit 65973be995a02e466fd3d98a8876ca8b41e4bcae
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Thu Jun 6 20:01:40 2024 +1000
+
+    JavaDocs ./docs GH upload
+
+commit 368e8572fc8446cd100f34cb671273862c80a42e
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Thu Jun 6 19:51:25 2024 +1000
+
+    JavaDocs ./docs GH upload
+
+commit 6f6baa91ab2cb1f5d87735f6e858b7967531851b
+Merge: 6b6c950 5103fd4
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Thu Jun 6 19:30:09 2024 +1000
+
+    Trent patch 17 (#51)
+    
+    Code clean up, code functioning.
+
+commit 5103fd42bd0b7a5fa4294647a0e3c8c155b54201
+Author: Trent <n11654015@qut.edu.au>
+Date:   Thu Jun 6 00:42:32 2024 +1000
+
+    cleaned up code a little, refactored, deleted unused code/matchups
+
+commit d3cb7654aa9c9cf89c4ff9dacfb7c82bda9bea6a
+Author: Trent <n11654015@qut.edu.au>
+Date:   Thu Jun 6 00:40:43 2024 +1000
+
+    cleaned up code a little, refactored, deleted unused code/matchups
+
+commit 6b6c950f9f5347ae64900f20a3aa46fb7bf1c0f6
+Merge: 491f528 c528c71
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue May 28 13:33:48 2024 +1000
+
+    Merged reports with Trent-patch-16 (#50)
+    
+    Reports page merged with updates in Trent-patch-16
+
+commit c528c715477ce7f26af96bf9e5f7a6455d5ce9ec
+Author: angerpac <anger.pac@connect.qut.edu.au>
+Date:   Tue May 28 10:07:56 2024 +1000
+
+    added DB to git ignore
+
+commit 491f528feae15107d1ef6b38d0e21c3f6b84f86a
+Merge: 078ad0a 16129b7
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Mon May 27 22:50:23 2024 +1000
+
+    Shem patch 7 (#48)
+    
+    slcd14
+    slcd14 commented 2 minutes ago
+    This is the version with the focus period application and the new UI.
+    The functionality of the focus period function is to
+    
+    1 .User to create a task with starting time and end time
+    2. Able to keep on track on the task
+    3. After the session time is over user can select the task as completed
+    or not to recognise what may been the issue to not
+    4. completing the task in the right time
+
+commit 854d1ea7a93566ef1273d4d49f5b1d674a6a6d5a
+Author: angerpac <anger.pac@connect.qut.edu.au>
+Date:   Mon May 27 18:42:55 2024 +1000
+
+    added reports dao
+
+commit dcab222c230f51224507b81d88f9db5a9b6fab28
+Merge: a0982f3 d58c2ac
+Author: angerpac <anger.pac@connect.qut.edu.au>
+Date:   Mon May 27 15:45:04 2024 +1000
+
+    Merge remote-tracking branch 'origin/display-trends' into reports-merge
+    
+    # Conflicts:
+    #       Wellness_Tracker.db
+
+commit a0982f3a7158adf5ef8b8c2496e400fdf66a3f93
+Author: Trent <n11654015@qut.edu.au>
+Date:   Mon May 27 14:58:11 2024 +1000
+
+    altered to match rachels code
+
+commit d58c2ac59c062e666097a06a2f61a7444aae7ea6
+Author: angerpac <anger.pac@connect.qut.edu.au>
+Date:   Mon May 27 14:31:14 2024 +1000
+
+    added queries to Report DAO
+
+commit 078ad0a4f46b8fcba64ea7d02f76852c1d042cef
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Mon May 27 14:26:02 2024 +1000
+
+    Update README.md
+
+commit 267c84396424f3feaaa5be01e30eeb2d0fe1b532
+Author: Trent <n11654015@qut.edu.au>
+Date:   Mon May 27 14:13:04 2024 +1000
+
+    potential build fix
+
+commit 16129b74203b7545a66034429be941380d164a80
+Merge: 97b6f10 b6c55d1
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 03:35:50 2024 +0900
+
+    Merge branch 'main' into Shem-Patch-7
+
+commit 97b6f1022c077d072b2eadf2c3f45a09b622c2b9
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:32:46 2024 +1000
+
+    Update home-view.fxml
+    
+    Had error with the git force pushing, the one up on the main branch atm is what I tried to changed, but it will not be used anymore will be stick on with the original version
+
+commit b6c55d13c50cdc130c57b736e7071797159d09ab
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:26:17 2024 +1000
+
+    Update home-view.fxml
+
+commit 2df8b6ab28a3621188748710b02bca5f43a8884e
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:22:26 2024 +1000
+
+    Update home-view.fxml
+
+commit 375a496030dc64d977cbe55aabef328f79b350d1
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:21:19 2024 +1000
+
+    Update stylesheet2.css
+    
+    Update the UIUX for the more cleaner and visible using different font sizes, test and background colours.
+
+commit 16d2d29c1165bbc7725cfaf57c6e3b0480ba9dbe
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:19:58 2024 +1000
+
+    Update navigationBar-view.fxml
+    
+    Add button for the focus period function
+
+commit 10b906993ce30d1a2b7cbd7fae237b68768cad5b
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:19:12 2024 +1000
+
+    Create focus-period-view.fxml
+
+commit 54899bc0c70872489136b67a818d514c3bc08590
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:18:10 2024 +1000
+
+    Update NavigationBarController.java
+    
+    Add buttons for the focus period controller
+
+commit 9da3e0ce7e08a9257913f8cfe3ef9e5c7fede6a8
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:17:03 2024 +1000
+
+    Update HomeApplication.java
+    
+    Change the screen size (resolution) to
+    890 x 500
+
+commit 14981ab7d35bc594f1271cab68cbb17e85a5b077
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:15:22 2024 +1000
+
+    Create FocusPeriodService.java
+
+commit 849b38a44ba4e8df0809493744ca4df4c16c8276
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:14:55 2024 +1000
+
+    Create FocusPeriodController.java
+
+commit 5ad71e0c51f978fac7523715b876f22ea7148423
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:14:07 2024 +1000
+
+    Create FocusPeriodApp.java
+
+commit df33191ccf33e108a28bdebaf322ebf3bff15500
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:13:39 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/FocusPeriodApp
+
+commit 9af79fad61c877c6839e51cec354cf72226cea52
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Mon May 27 04:13:05 2024 +1000
+
+    Create FocusPeriodApp
+
+commit 60a94027059375abf012ffebb7185f87e5d16b1f
+Author: angerpac <anger.pac@connect.qut.edu.au>
+Date:   Sat May 25 16:40:30 2024 +1000
+
+    added detailed activity link, added Application column to Usage
+
+commit 21970c7ebea0c1a56dc1226ef03237cf235c6872
+Author: Trent <n11654015@qut.edu.au>
+Date:   Sat May 25 12:43:48 2024 +1000
+
+    implemented timer DAO, updated profile screen, updated home screen
+
+commit 117a752ceec4b4baf5a7d1ba5a747906ca6c48d0
+Author: Trent <n11654015@qut.edu.au>
+Date:   Fri May 24 12:58:42 2024 +1000
+
+    implemented timer DAO, updated profile screen, updated home screen
+
+commit 3c3d9eaadcb3e30ffa245a8f8f3c50c9c77395b3
+Author: angerpac <anger.pac@connect.qut.edu.au>
+Date:   Wed May 15 17:49:19 2024 +1000
+
+    added test data
+
+commit 56654588365c6e1b2db07a6dec86ea0b645c5acd
+Merge: 77af261 0b9a882
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Wed May 15 17:49:03 2024 +1000
+
+    Update LoginController.java (#39)
+    
+    Imported ErrorAlert back in so pull request #36 would function (pass CI/CD pipeline test, failing at Maven Build).
+
+commit 335ca623795cee79afff241e7f16af7d5d9116e6
+Author: angerpac <anger.pac@connect.qut.edu.au>
+Date:   Wed May 15 17:48:48 2024 +1000
+
+    added DB connection to graphs
+
+commit 77af2617854b34ecba3aed4a0731d57aff22ecec
+Merge: 111105d 2bfd11f
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 15 17:47:04 2024 +1000
+
+    Added user activity tracking + timer functionality (#38)
+    
+    Added user activity tracking (currently printing message to terminal) -
+    will need to be stored in DB just like the actual timer function to be
+    displayed on the reports page, enhanced functionality on timer page,
+    updated resources page (added images and description section).
+
+commit 0b9a882c16a960764f96179c3698776d90ff8416
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 15 17:45:29 2024 +1000
+
+    Update LoginController.java
+
+commit 111105d2bf9c60d56efedee617453abb815ffb98
+Merge: 05ec1bc 3f60031
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Wed May 15 17:30:30 2024 +1000
+
+    Update LoginController.java (#35)
+    
+    Delete duplicate methods
+
+commit 2bfd11f3f62d64e517a452cf79ba87b4023e399a
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Wed May 15 17:01:34 2024 +1000
+
+    Add user activity tracker, update resources page, add JNA libraries.
+
+commit a62b5fe3e9a84471930708c5ee0f150b08e2be64
+Merge: 666a604 05ec1bc
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Wed May 15 15:19:39 2024 +1000
+
+    Merge branch 'main' of https://github.com/ottohellwig/cab302-wellbeing-project into timer-imp1
+
+commit 05ec1bc2a3b7354e4bd15805b251c93ec26510ad
+Merge: d377095 69bf604
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Wed May 15 15:13:36 2024 +1000
+
+    Create ci-cd-pipeline.yml (#34)
+    
+    Create CI/CD pipline.yml
+
+commit 666a60462d20083886f70af996702b92056b31ac
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Wed May 15 15:09:32 2024 +1000
+
+    Add functionality to timer interval checkbox.
+
+commit 3f6003124238b62936e17a6c58bc1fe4bad35a58
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 15 12:05:53 2024 +1000
+
+    Update AppUser.java
+    
+    added javadoc
+
+commit 23713bc84a8603cf6b708c05be3c9982c988e56f
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 15 12:01:31 2024 +1000
+
+    Update SignupController.java
+    
+    deleted double ups
+
+commit b8df11316f880ff345cd67a2dcfb451f48116037
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 15 11:57:52 2024 +1000
+
+    Update ProfileController.java
+    
+    updated comments
+
+commit c6e8d1c961a745a50af1ee4764a9acf346077227
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 15 11:45:00 2024 +1000
+
+    Update LoginController.java
+    
+    deleted double ups
+
+commit 69bf604a37f880b90186c90b95d1473838097008
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Wed May 15 03:50:59 2024 +1000
+
+    Adding 'jbcrypt' dependency in 'pom.xml'
+    
+    The error caused during creating CI/CD pipeline
+    error caused during passing the test "build with Maven".
+    
+    "Error:  /home/runner/work/cab302-wellbeing-project/cab302-wellbeing-project/src/main/java/module-info.java:[8,14] module not found: jbcrypt"
+    
+    This could been caused because of jbcrypt module is not found in the compilation process, therefore 'jbcrypt' dependency has been added in the 'pom.xml'
+
+commit fddf7c767c36e5f8fc2d26d3d6210ece24916d99
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Wed May 15 03:42:14 2024 +1000
+
+    Update ci-cd-pipeline.yml
+    
+    Added distribution parameter specifies the JDK distribution to use.
+    
+    adopt refers to adoptOpenJDK
+
+commit a6c50cb926d94b9c28054ea0f4dfb659ec8263c9
+Author: slcd14 <162427481+slcd14@users.noreply.github.com>
+Date:   Wed May 15 03:36:01 2024 +1000
+
+    Create ci-cd-pipeline.yml
+    
+    Create CI/CD pipline.yml
+
+commit d377095772321524c03c04a2474722a2c49b028d
+Merge: a29751c ff2ade1
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Wed May 15 01:20:43 2024 +1000
+
+    Timer controller + resource hyperlink fix (#32)
+    
+    Updated the timer controller, added pause functionality, added pop-up at
+    end of timer and changed UI. Fixed the resources page hyperlink and
+    deleted the duplicate .fxml file.
+
+commit ff2ade1294a0dc20afd4b67c071ca0bcb013e549
+Merge: 764d57e a29751c
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Wed May 15 01:18:23 2024 +1000
+
+    Merge branch 'main' into timer-resource-update
+
+commit a29751c9d52d94fe42ea9856cf21f96b09971ef8
+Merge: cfbac8a c356fb9
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Wed May 15 01:07:09 2024 +1000
+
+    Trent patch 11 (#33)
+    
+    Reformed database structure, interface and implementation, added profile
+    page and user updatability, added remember me function, added session
+    class.
+
+commit c356fb9f2fd045f9d82f365e304df88c63e512db
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 23:32:17 2024 +1000
+
+    Update IAppUserDAO.java
+    
+    updated comments
+
+commit 70353a17c85e0d0ea732e41801fcb9ddd534d4b2
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 23:30:28 2024 +1000
+
+    Update DBConnection.java
+    
+    added comments
+
+commit ce21958636860fa21fdb126477e4140447bc6b1a
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 23:29:23 2024 +1000
+
+    Update DBAppUserDao.java
+    
+    added comments
+
+commit 8ce0e8730a26e68e38e622f8da318f975d274542
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 23:11:10 2024 +1000
+
+    Update AppUser.java
+    
+    comments
+
+commit 8cfbd08d0525180616fc2670fa61536ea4f27bce
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 23:07:38 2024 +1000
+
+    Update AppSession.java
+
+commit 5608fb3c2731f280b9094fd3c2a4f08b3998f0a5
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 23:05:37 2024 +1000
+
+    Update SignupController.java
+    
+    comments
+
+commit 14e48749fc2d075100569d1094babc951c924592
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 23:03:54 2024 +1000
+
+    Update SignupApplication.java
+    
+    added comments
+
+commit 203b2db88f575592802ff06736468f357708c630
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 23:00:20 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/resources_page/resources.README
+    
+    deleted readme
+
+commit 6608acb4ad0f461fd3d81299f1b02edcde01498e
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 22:59:38 2024 +1000
+
+    Update ProfileController.java
+    
+    further commenting
+
+commit fa487db6ad31269f01bcbdb5989d2a84fd3555f5
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 22:49:24 2024 +1000
+
+    Update LoginController.java
+    
+    further commenting
+
+commit 2d1c020db7722ac33e02981072796dc4bffbdbfc
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 22:42:24 2024 +1000
+
+    Update LoginApplication.java
+    
+    adding commenting
+
+commit 3f668d459d9c51f09840252f700a46357a7ab12f
+Author: angerpac <anger.pac@connect.qut.edu.au>
+Date:   Tue May 14 21:01:50 2024 +1000
+
+    added weekly and daily graphs with sample data
+
+commit 5b596c9a65e6a559dbf7d6c9e0916cfbc99cb51c
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:37:12 2024 +1000
+
+    Update module-info.java
+    
+    include new pages
+
+commit d9ec8fa58ae67c24516b7bdeb722a39df3ee3149
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:35:44 2024 +1000
+
+    Create profile-view.fxml
+    
+    profile fxml file
+
+commit ce4c58a53c901d6864189953d5f47ae875df3fa4
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:35:01 2024 +1000
+
+    Update login-view.fxml
+    
+    updated login
+
+commit 711db49fece3a5d4d65a59b9679b044484c0c5b0
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:34:22 2024 +1000
+
+    Update navigationBar-view.fxml
+    
+    updated for profile page
+
+commit 58e43e079ebb0faf7b0f7181e9b006d79c496514
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:33:33 2024 +1000
+
+    Update NavigationBarController.java
+    
+    updated to include profile button
+
+commit 27cf0764b3fad763daa48a15d572aa29a9f3b9cc
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:32:52 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/universal/universal.README
+    
+    delete readme
+
+commit 3c02deda3bed288777a26abebbae92ecc32a4b58
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:32:40 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/universal/User.java
+    
+    unused
+
+commit e7fc68168b2806ec00a4ad484a1239f1447fb707
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:32:21 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/universal/ConnectDatabase.java
+
+commit 99dd6aae4ed8651d4fbf816997a71345a8bb83ca
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:32:07 2024 +1000
+
+    Create IAppUserDAO.java
+    
+    database interface
+
+commit 73fd462790912b553a72a8bbf2e6daa88817ca96
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:31:29 2024 +1000
+
+    Create DBConnection.java
+    
+    New database connector
+
+commit 6e393407d1ea957a4c87486ed53b0e16f3d6ed31
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:30:58 2024 +1000
+
+    Create DBAppUserDao.java
+    
+    User DAO
+
+commit 99c1f988dad722d5b43f310c0b7353a0f7a46b20
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:30:17 2024 +1000
+
+    Create AppUser.java
+    
+    User class, might not need as much as i have in here
+
+commit a5432d51206af41ddbcf82be09e28698168c1bec
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:29:41 2024 +1000
+
+    Create AppSession.java
+    
+    Session manager
+
+commit ee178f930f96059010853d784afb8133cb761749
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:28:48 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/signup/signup.README
+    
+    deleted readme
+
+commit bc1e46d0c813c4359302a0458d1043d3d11c972c
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:28:35 2024 +1000
+
+    Update SignupController.java
+    
+    Just making sure it aligns with my file
+
+commit 068af16ea810706d1291bba2355351a87b659fbe
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:28:07 2024 +1000
+
+    Update SignupApplication.java
+    
+    Just making sure it aligns with my file
+
+commit 46a23bd07b7fa9df733ed0b12971720a51315100
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:21:25 2024 +1000
+
+    Rename ProfileController to ProfileController.java
+
+commit a36cdae4d10f9f4683a6d6dba2a5c99642f3c562
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:21:05 2024 +1000
+
+    Create ProfileController
+    
+    profile page controller
+
+commit e121d1e472dcf6fd2c7942ce34313f74aff1c662
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:20:25 2024 +1000
+
+    Create ProfileApplication.java
+    
+    Creating profile page
+
+commit 1f53a035c898cd7e99fe157cf19f45e8026d4ea0
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:19:15 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/logout/logoutREADME
+    
+    deleting readme
+
+commit 0886a3ffe4140008856224b3951f61e781a7d2d9
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:18:59 2024 +1000
+
+    Update LogoutController.java
+    
+    Just making sure it aligns with my file
+
+commit 83883fd370dab531544ef591782e101ec960b8bf
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:18:13 2024 +1000
+
+    Update LogoutApplication.java
+
+commit 73f9580b9ef5200236c960acdb0b03d4b9eb7b12
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:16:20 2024 +1000
+
+    Delete src/main/java/com/example/wellbeing_project/login/login
+    
+    deleted readme
+
+commit bcbf7b399528659faf2cbe26a62150cdcdbd588d
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:15:27 2024 +1000
+
+    Update LoginController.java
+    
+    Just making sure it aligns with my file
+
+commit 17eeb8be4c1cfd6bc591c20a2f65dfcd66bdccc8
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:15:05 2024 +1000
+
+    Update LoginApplication.java
+    
+    Just making sure it aligns with my file
+
+commit 083686b88d8fea9d95312c3044259b3619c602fb
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue May 14 17:13:10 2024 +1000
+
+    Add files via upload
+
+commit 764d57ec9921fe97d51b6f089a2d17af353e27fb
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Tue May 14 15:55:51 2024 +1000
+
+    Update timer controller and fix resources hyperlink.
+
+commit bac2671d9ad0760a948a013e65ea6bf960641ef2
+Author: angerpac <anger.pac@connect.qut.edu.au>
+Date:   Sat May 11 11:51:24 2024 +1000
+
+    added chart with sample data
+
+commit cfbac8a0c6e12fbd3773c835f061bba87012fe36
+Merge: 7b58591 7a60ecc
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 1 19:03:03 2024 +1000
+
+    Merge pull request #31 from ottohellwig/Trent057-patch-10
+    
+    Update ConnectDatabase.java
+
+commit 7a60ecc8e9c2939a9a91d713625f8aaba3cd6b46
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 1 19:02:53 2024 +1000
+
+    Update ConnectDatabase.java
+
+commit 7b58591a9ff5deb892cf3782fd8507d24aff2ce0
+Merge: e67392f 0ab875c
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 1 18:58:34 2024 +1000
+
+    Merge pull request #29 from ottohellwig/Trent057-patch-8
+    
+    Update HomeApplication.java
+
+commit e67392ff213fd2ec4d1a0e9e09699ae89c66318e
+Merge: 83767c1 2e0c230
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 1 18:58:11 2024 +1000
+
+    Merge pull request #30 from ottohellwig/Trent057-patch-9
+    
+    Update NavigationBarController.java
+
+commit 2e0c2301a26de10c51527ed2117b37d975e95f40
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 1 18:57:48 2024 +1000
+
+    Update NavigationBarController.java
+
+commit 0ab875c3e3185467622ddfdf214d183e2b1d21e7
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 1 18:56:21 2024 +1000
+
+    Update HomeApplication.java
+
+commit 83767c10686a50173f2161a223cc85253a3b40de
+Merge: 709152f f49693a
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 1 18:38:58 2024 +1000
+
+    Merge pull request #28 from ottohellwig/ottohellwig-patch-1
+    
+    Update README.md
+
+commit f49693a0685b7a7eac29636169bbc927032b0847
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Wed May 1 18:38:02 2024 +1000
+
+    Update README.md
+
+commit 709152fc6dbef31e456ab2b6bd46ea9267fedda5
+Merge: 2f25c5d fcf438a
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Wed May 1 18:36:50 2024 +1000
+
+    Merge pull request #27 from ottohellwig/Trent057-patch-7
+    
+    Update NavigationBarController.java
+
+commit fcf438a694df0c5c344c58ced53a49e56069e42b
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 1 18:36:34 2024 +1000
+
+    Update HomeApplication.java
+
+commit d122068efc063390038cbf93d7ee4a6025470f8f
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Wed May 1 18:35:24 2024 +1000
+
+    Update NavigationBarController.java
+
+commit 2f25c5d4a1d09849282db35c9674a319cf890b3a
+Merge: bfff1aa ad5f8f0
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 21:08:30 2024 +1000
+
+    Merge pull request #26 from ottohellwig/resources
+    
+    Update resources page
+
+commit ad5f8f0c83f10f8edc4cfb277881fd231c3a13d8
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Tue Apr 30 21:03:14 2024 +1000
+
+    Update resources page to display guides
+
+commit bfff1aa93878e346ba37aadf9a5c815115892bd9
+Merge: 86bfe08 9937c5f
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 20:15:06 2024 +1000
+
+    Merge pull request #25 from ottohellwig/timer
+    
+    Timer
+
+commit 9937c5f76394843cc95fda422a86bb115d7a163d
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Tue Apr 30 20:13:14 2024 +1000
+
+    Implement timer function
+
+commit 86bfe080dfe9f2fa91896eec053f8555639e20e7
+Merge: b1712bd e8959f7
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 19:21:16 2024 +1000
+
+    Merge pull request #24 from ottohellwig/home-functionality
+    
+    Link login to home
+
+commit e8959f7f77116d599c957f1e8426a1fe73f81080
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Tue Apr 30 19:19:41 2024 +1000
+
+    Link successful login to HomeApplication
+
+commit b1712bdfeea39167c659dd5f22c5949592e92fd6
+Merge: 8242a7c 7f80cae
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 18:10:56 2024 +1000
+
+    Merge pull request #23 from ottohellwig/update-fix
+    
+    Add updates/fixes
+
+commit 7f80caed9a44ce7de39be2e70325793a0fe33015
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Tue Apr 30 18:09:35 2024 +1000
+
+    Update/fix
+
+commit 003df0357bda95e0a36d4d9ed707cebccbe207fe
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Tue Apr 30 18:05:47 2024 +1000
+
+    Update module-info + DB
+
+commit 8242a7cf84739861d3b3b0a3d8198b694294d0f3
+Merge: 179a4eb 0d47d71
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 18:02:54 2024 +1000
+
+    Merge pull request #21 from ottohellwig/Trent057-main-patch-5
+    
+    Trent057 main patch 5
+
+commit 0d47d714416aac17060424f18efd1bbd74cda1ca
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 17:39:56 2024 +1000
+
+    Create logout_fxml.README
+
+commit d3817cb15868c05719f17274427ca08e89ff3bcd
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 17:14:29 2024 +1000
+
+    Update signup-view.fxml
+
+commit 3cc88fde28b2869a3cf495061f103648087506ac
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 17:02:19 2024 +1000
+
+    Update SignupApplication.java
+
+commit 816a4584b4a506e11ef08f4ff60e621af7f6c4b8
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 17:02:02 2024 +1000
+
+    Update ResourcesApplication.java
+
+commit 2616d67639534f2d44f4990100209f9901c171fb
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 17:01:46 2024 +1000
+
+    Update LogoutApplication.java
+
+commit 338a1a69d45358b315ad2338e1044b538094f43b
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 17:01:32 2024 +1000
+
+    Update LoginApplication.java
+
+commit cfd011cdbf2f30580a51af2efaa8aedf370f98a4
+Author: Trent057 <162427327+Trent057@users.noreply.github.com>
+Date:   Tue Apr 30 16:57:46 2024 +1000
+
+    Update Module-infoCOPY
+
+commit 179a4ebb93e51b0a24601ddfd7272a0427e94617
+Merge: 513d8df 524d94c
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 16:38:49 2024 +1000
+
+    Merge pull request #20 from ottohellwig/otto-func
+    
+    Update info module
+
+commit 524d94c44c2a96b2dba39621e88997507c9f9036
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Tue Apr 30 16:38:07 2024 +1000
+
+    Update module info
+
+commit 513d8df4abb7e32dacb8018e9886453266f94d42
+Merge: 48d81ef 7bcd8be
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 16:03:34 2024 +1000
+
+    Merge pull request #19 from ottohellwig/fixes
+    
+    Add fixes
+
+commit 7bcd8bedd1ebe68e00e31412aa2e04cf78ce4c29
+Author: Otto Hellwig <ottohellwig@hotmail.com>
+Date:   Tue Apr 30 16:00:18 2024 +1000
+
+    Add SQL requirement
+
+commit 48d81ef30005daf6ddddbce92afef0a566c1e427
+Merge: 3e4355e 6586732
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 14:07:35 2024 +1000
+
+    Merge pull request #18 from ottohellwig/license
+    
+    Create LICENSE
+
+commit 6586732f2d7bacebd727be6d690a328e49126cba
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 14:07:27 2024 +1000
+
+    Create LICENSE
+
+commit 3e4355e63432a38c94327cd16f5ccc0b68b3db57
+Merge: 0022768 38d123e
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 13:54:27 2024 +1000
+
+    Merge pull request #16 from ottohellwig/readme
+    
+    Update README.md
+
+commit 38d123e6ae10cdb7452f68d716c57079d1d15f9c
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 13:53:52 2024 +1000
+
+    Update README.md
+
+commit 0022768f54975b0cdf5a152a98bf2e602d5e4592
+Merge: 8ad2ca1 f806120
+Author: Otto Hellwig <105997582+ottohellwig@users.noreply.github.com>
+Date:   Tue Apr 30 13:42:25 2024 +1000
+
+    Merge pull request #15 from ottohellwig/logs
+    
+    Update Git commit logs
+
+commit f806120398817672f5a9e7271b074d2cdd4399f5
+Author: n11081708 <ottohellwig@hotmail.com>
+Date:   Tue Apr 30 13:40:53 2024 +1000
+
+    Add new commit logs
+
 commit db71bc04dd8b6dbe6e56722f3399139e15239686
 Author: n11081708 <ottohellwig@hotmail.com>
 Date:   Tue Apr 30 13:30:16 2024 +1000
